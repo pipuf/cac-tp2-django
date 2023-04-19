@@ -1,0 +1,34 @@
+@import "./style_guide.css";
+
+body{
+   height: 100vh; 
+}
+
+header{
+    height: 20%
+}
+
+
+header > iframe{
+    height:100%;
+    width: 100%;
+    /* background-color: var(--secondary-background); */
+}
+main{
+    height:70%;
+}
+
+footer{
+    height: 10%;
+}
+
+footer > iframe{
+    height:100%;
+    width: 100%;
+    background-color: var(--footer-background);
+}
+
+
+
+
+

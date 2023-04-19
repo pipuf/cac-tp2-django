@@ -1,0 +1,61 @@
+@import "./style_guide.css";
+
+*{
+    border: var(--test-border)
+}
+
+/* body{
+    height: 100vh; 
+ } */
+ 
+header{
+    height:100%;
+    background-color: var(--secondary-background);
+}
+
+.top_nav{
+    height:100%;
+    display: grid;
+    /* grid-template-columns: repeat(var(--footer-column-count),1fr); */
+    grid-template-areas: "logo resto resto resto resto resto"; 
+    gap: 0px;
+}
+
+.flex_menu{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: stretch;
+  grid-area: resto;
+}
+
+.flex_item{
+  min-height: 100%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin: 15px;
+}
+
+#logo{
+    /* height: 100px;
+    width: 100px; */
+    height: 100%;
+    min-height: 100px;
+    min-width: 100px;
+    grid-area: logo;
+    background-image: url("../img/logo.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo > img{
+    height:100%;
+}
+

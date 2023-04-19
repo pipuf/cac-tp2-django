@@ -1,0 +1,40 @@
+*{  margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--main-font-color);
+}
+
+:root{
+    /* Colores */
+    --rojo:rgba(230, 76, 64, 1);
+    --amarillo:rgba(248, 199, 64, 1);
+    --gris-claro:rgba(243, 243, 243, 1);
+    --gris-oscuro:rgba(63, 63, 63, 1);
+
+    /* Aplicacion de colores */
+    --main-bckg:var(--gris-claro);
+    --secondary-background:var(--amarillo);
+    --footer-background:var(--rojo);
+
+
+    /* Grids Main*/
+    --cards-per-row-web:4;
+    --rows-per-page-web:4;
+    --menu-card-width:calc(100% / var(--cards-per-row-web));
+
+    /* Grids Footer */
+    --footer-column-count:3;
+
+    /* Grid Header */
+    --header-column-count:6;
+
+    /* Fonts */
+    --main-font-color:var(--gris-oscuro);
+    --secondary-font-color:var(--gris-claro);
+
+    /* border para debugging */
+    /* --test-border:1px solid rgb(0,0,0); */
+    --test-border:none;
+
+}
