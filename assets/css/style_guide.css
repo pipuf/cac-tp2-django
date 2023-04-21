@@ -34,7 +34,8 @@
     --secondary-font-color:var(--gris-claro);
 
     /* border para debugging */
-    /* --test-border:1px solid rgb(0,0,0); */
     --test-border:none;
+    /* --test-border:1px solid rgb(0,0,0); */
+    
 
 }

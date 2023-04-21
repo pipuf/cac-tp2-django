@@ -5,26 +5,16 @@ body{
 }
 
 header{
-    height: 20%
+    height: 20%;
+    background-color: var(--secondary-background);
 }
 
-
-header > iframe{
-    height:100%;
-    width: 100%;
-    /* background-color: var(--secondary-background); */
-}
 main{
     height:70%;
 }
 
 footer{
-    height: 10%;
-}
-
-footer > iframe{
-    height:100%;
-    width: 100%;
+    height: auto;
     background-color: var(--footer-background);
 }
 

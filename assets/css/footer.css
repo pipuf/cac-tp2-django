@@ -4,19 +4,7 @@
     border: var(--test-border)
 }
 
-body{
-    height: 100vh; 
- }
-
-footer{
-    height:100%;
-    width: 100%;
-    background-color: var(--footer-background);
-}
-
 .footer_grid{
-    /* height: 100%;
-    width: 100%; */
     padding:0px 0px 0px 10px;
     display: grid;
     grid-template-columns: repeat(var(--footer-column-count),1fr); 
