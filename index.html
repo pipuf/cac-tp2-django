@@ -12,45 +12,39 @@
     <title>Naceluja</title>
 </head>
 <body>
-    <section>
+    <!-- <section> -->
     <header class="header">
         <nav>
-            <img src="./assets/img/logo-removebg-preview.png" alt="logo">
+            <a href="./index.html">
+                 <img id="logo" src="./assets/img/logo-removebg-preview.png" alt="logo">
+            </a>
             <input class="menu" type="checkbox" src="assets/img/icons8-menú-30.png">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Sucursales</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
+            <ul class="flex-menu-wrapper">
+                <li class="flex-menu-item"><a class="menu-button-first" href="./index.html">Inicio</a></li>
+                <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
+                <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
+                <li class="flex-menu-item"><a class="menu-button" href="./form_registro.html">Registrate</a></li>
+                <li class="flex-menu-item"><a class="menu-button-first" href="#">Sobre nosotros</a></li>
             </ul>
         </nav>
-
-        <!-- <div class="top_nav">
-            <div id="logo">
-                <a href="./index.html" target="_top"></a>
-                <img src="./assets/img/logo.png" alt="logo">
-            </div>
-            <div class="flex_menu">
-                <div class="flex-item">
-                    <a href="./index.html" target="_top">Inicio</a>
-                </div>
-                <div class="flex-item">
-                    <a href="./menu.html" target="_top">Menú</a>
-                </div>
-                <div class="flex-item">
-                    <a href="./sucursales.html" target="_top">Sucursales</a>
-                </div>
-                <div class="flex-item">
-                    <a href="form_registro.html" target="_top">Registrate</a>
-                </div>
-            </div>
-        </div> -->
    </header>
-    <main class="content">
-        <div class="flex-item"><h1>Home - flex 1</h1></div>
-        <div class="flex-item"><h1>Home - flex 2</h1></div>
-        <div class="flex-item"><h1>Home - flex 3</h1></div>
+    <main> 
+        <section class="carrousel">
+        </section>
+        <div class="content">
+            <section class="flex-item">
+                <h2>Sarasa 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam distinctio aut possimus amet aliquam mollitia consectetur dolore quas adipisci? Dicta magnam illum blanditiis atque vero inventore eius. Quisquam, vero nobis.</p>
+            </section>
+            <section class="flex-item">
+                <h2>Sarasa 2</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore recusandae aliquid reprehenderit porro alias totam illum dolorem fuga sed eos cupiditate provident dolores ea fugiat, veritatis quisquam officia odit voluptate?</p>
+            </section>
+            <section class="flex-item">
+                <h2>Sarasa 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vero, ipsum nobis voluptatem odio officiis ipsam fugit cumque distinctio possimus facere eum magni veritatis quos labore deleniti odit! Earum, nisi!</p>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <!-- <div class="content_footer">
@@ -73,6 +67,6 @@
                 </div>
             </div> -->
     </footer>
-   </section>
+   <!-- </section> -->
 </body>
 </html>
