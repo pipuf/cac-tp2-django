@@ -145,6 +145,17 @@ nav {
         .carrousel {
             background-image: url("../img/promo1.png");
         }
+        .content {
+            display: block;
+            /* margin-right: 2vw; */
+        }
+
+        .flex-item {
+            display: block;
+            margin-right: 2vw;
+        }
+        
+        
   }
 
   @media only screen and (min-width: 600px) and (max-width: 959px){
