@@ -1,7 +1,8 @@
 *{  margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    font-family: 'Ubuntu', sans-serif;
     color: var(--main-font-color);
 }
 
@@ -26,7 +27,7 @@
 
 
     /* Grids Footer */
-    --footer-column-count:3;
+    --footer-column-count:4;
 
     /* Grid Header */
     --header-column-count:6;
