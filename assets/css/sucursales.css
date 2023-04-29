@@ -1,0 +1,64 @@
+main{ 
+    min-height: 70vh;
+}
+
+.sucursales{
+    height: auto;
+    padding-bottom: 60px;
+}
+
+.texto-sucursales{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.texto-sucursales p{
+    margin: 10px 0;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.item-sucursales{
+    display: block;
+    padding: 10px 25px;
+    margin:5px;
+}
+
+.lista-sucursales {
+    display: inline-block;
+    
+}
+
+.mapa-sucursal{
+    display: inline-block;
+
+}
+
+.item-sucursales{
+    display: grid;
+}
+
+.frame-mapa{
+    display:none;
+}
+
+#mapa-sucursal1  {
+    display: inline-block;
+}
+
+#sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
+    display: inline-block;
+}
+
+#sucursal2:focus ~ .mapa-sucursal > #mapa-sucursal2  {
+    display: inline-block;
+}
+
+.mapa-sucursal{
+    grid-column: 3/10;
+}
+
+.datos-sucursal {
+    grid-column: 10/13;
+    text-align: center;
+}

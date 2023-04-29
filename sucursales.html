@@ -6,31 +6,130 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-        <link href="./assets/css/main.css" rel="stylesheet">
-        <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- ------------ -->
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/fa89224564.js" crossorigin="anonymous"></script>
+    <!-- ------------------ -->
+   
+    <!-- Author stylesheets -->
+    <link href="./assets/css/header.css" rel="stylesheet">    
+    <link href="./assets/css/footer.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/sucursales.css" rel="stylesheet">
+    
+    <!-- ------------------ -->
+
+    <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
         <title>Naceluja</title>
     </head>
     <body>
         <header class="header">
-            <nav>
-                <a href="./index.html">
-                     <img id="logo" src="./assets/img/logo-removebg-preview.png" alt="logo">
-                </a>
-                <input class="menu" type="checkbox" src="assets/img/icons8-menú-30.png">
-                <ul class="flex-menu-wrapper">
-                    <li class="flex-menu-item"><a class="menu-button-first" href="./index.html">Inicio</a></li>
-                    <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
-                    <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
-                    <li class="flex-menu-item"><a class="menu-button" href="./form_registro.html">Registrate</a></li>
-                    <li class="flex-menu-item"><a class="menu-button-first" href="#">Sobre nosotros</a></li>
-                </ul>
-            </nav>
+            <div class="grid">
+                <div class="img-logo">
+                    <a href="./index.html">
+                        <img class="img" id="logo" src="./assets/img/logo-removebg-preview.png" alt="logo">
+                    </a>
+                </div>
+                <nav class="menu">  
+                    <a href="#">
+                        <img class="mobile-menu" src="./assets/icons/menu.png" alt="menu">                        
+                    </a>                  
+                    <!-- <input class="mobile-menu" type="checkbox" src="assets/img/icons8-menú-30.png"> -->
+                    <ul class="flex-menu-wrapper">
+                        <li class="flex-menu-item"><a class="menu-button" href="./index.html">Inicio</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
+                        <li class="flex-menu-item"><a class="menu-button-first" href="./sucursales.html">Sucursales</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="./form_registro.html">Registrate</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="#">Sobre nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
        </header>
         <main> 
-          <h1>Sucursales</h1>
+          <section class="sucursales">
+            <div class="grid">
+                <div class="texto-sucursales">
+                     <h1 class="titulo-sucursales">Sucursales</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
+                </div>
+                <div class="selector-sucursales">
+                    <input type="button" class="item-sucursales" id="sucursal1" value="Sucursal 1" onclick="elegirSucursal(this)">
+                    <input type="button" class="item-sucursales" id="sucursal2" value="Sucursal 2" onclick="elegirSucursal(this)">
+                    <input type="button" class="item-sucursales" id="sucursal3" value="Sucursal 3" onclick="elegirSucursal(this)">
+                    <input type="button" class="item-sucursales" id="sucursal4" value="Sucursal 4" onclick="elegirSucursal(this)">    
+                </div>
+                <div class="mapa-sucursal">
+                    <iframe class="frame-mapa" id="mapa-sucursal1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.021712663224!2d-58.383133553714536!3d-34.603612460110654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1680238886168!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="frame-mapa" id="mapa-sucursal2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13137.529367513358!2d-58.4059338!3d-34.5944921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9a398f1acf%3A0x12624aa59e353724!2sPizza%20Calda!5e0!3m2!1ses!2sar!4v1682477228768!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                      
+                    <iframe class="frame-mapa" id="mapa-sucursal3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13137.529367513358!2d-58.4059338!3d-34.5944921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9a398f1acf%3A0x12624aa59e353724!2sPizza%20Calda!5e0!3m2!1ses!2sar!4v1682477228768!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                      
+                    <iframe class="frame-mapa" id="mapa-sucursal4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13137.529367513358!2d-58.4059338!3d-34.5944921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9a398f1acf%3A0x12624aa59e353724!2sPizza%20Calda!5e0!3m2!1ses!2sar!4v1682477228768!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                      
+                </div>
+                <div class="datos-sucursal">
+                    <h2>Sarasa</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, saepe.</p>
+                  </div>
+            </div>
+          </section>         
         </main>
-    <footer>
-    </footer>
-</body>
+        <footer class="footer">
+            <div class="grid">
+                <div class="footer_columnas">
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Participantes</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Descripción</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Documentación</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Sarasa</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum  error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>           
+                </div>
+                <section class="social-icons">
+<!--                     
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="# "></a> -->
+                    <!-- <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>                     -->
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Lucía</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Fede</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/in/cecilia-paolucci/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Cecilia Paolucci</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Jazmín</p>
+                    </div>
+                </section>
+                <section id="copyright">
+                    <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
+                </section>            
+       </footer>
+      
+       <!-- referencias a scripts -->
+       <script src="./assets/js/selector-sucursales.js"></script>
+       <!-- --------------------- -->
+
+    </body>   
 </html>

@@ -1,13 +1,23 @@
 @import "./style_guide.css";
 
-.footer_grid{
-    padding:0px 0px 0px 10px;
-    display: grid;
-    grid-template-columns: repeat(var(--footer-column-count),1fr); 
-    gap: 15px;
+.footer{
+    background-color: var(--footer-background);
 }
 
-.footer_column h5{
+.footer_columnas{
+    grid-column: 1/-1;
+    padding:0px 0px 0px 10px;
+    display:flex;
+    /* display: grid;
+    grid-template-columns: repeat(var(--footer-column-count),1fr);  */
+    /* gap: 15px; */
+}
+
+/* .footer-columna{
+    width: 25%;
+} */
+
+.footer-column-titulo{
  text-align: center;
  margin-top: 5px;
 }
@@ -18,11 +28,36 @@
     text-align: justify;
 }
 
+.social-icons{
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        /* margin: 50px 0;   */
+}
+
+
+/* [class^="fa-brands"]{ */
+.cv{
+    font-size: 20px;
+    text-align: center;
+    width: 22%;
+    padding: 10px;
+
+}
+
+.nombre-cv{
+    font-size: 12px;
+}
+
 #copyright{
+    grid-column: 1/-1;
     text-align: left;
     padding:0px 0px 0px 10px;
     /* padding: 10px; */
 }
+
+
 
 @media only screen and (max-width: 600px) {
     .footer_grid{

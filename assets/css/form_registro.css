@@ -1,0 +1,50 @@
+main{ 
+    min-height: 70vh;
+}
+
+.form-registro{
+    height: auto;
+    padding-bottom: 60px;
+}
+
+.texto-registro{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.texto-registro p{
+    margin: 10px 0;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.formulario {
+    grid-column: 1/-1;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: "1fr 1fr";
+    width: 100%;
+    /* max-width: 1100px; */
+    height: 100%;
+    margin: auto;
+    gap: 30px;
+    overflow: hidden;
+    align-items: center;
+}
+.form-columna1{
+    grid-column: 1;
+    /* background-color: yellowgreen; */
+}
+
+.form-columna2{
+    grid-column: 2;
+}
+
+.mensaje-error{
+    font-size: 12px;
+    color: red;
+    display: none;
+    margin: 0px 0px 10px 0px;
+}
