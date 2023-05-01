@@ -97,11 +97,6 @@ main{
 /* ------------- Fin animacion flip over --------------------  */
 
 /* ------------- Fin animacion slide ------------------------  */
-.animation-slide {
-    /* position: absolute; */
-    /* z-index:1; */
-    /* background-color: aqua; */
-}
 .animation-slide-front:hover {
     animation-duration: 3s; 
     animation-name: slidein;
@@ -119,7 +114,6 @@ main{
     background-color: var(--gris-claro);
     border-left: 1px;
     border-right: 1px;
-    border-color: blue;
 }
 /* ------------- Fin animacion slide ------------------------  */
 
