@@ -33,7 +33,7 @@
     height: 100%
 }
 .menu{
-    grid-column: 3/13;
+    grid-column: 5/13;
 }
 
 .button{
@@ -91,8 +91,9 @@
 } */
 
 
-
-@media only screen and (max-width: 670px){
+/* Puntos de corte sitio responsive */
+@media only screen and (max-width: 730px){
+/* Menu hamburguesa */
 .button {
         cursor: pointer;
         grid-column: 10/13;
@@ -110,6 +111,7 @@
         right: 0;
         background-color: var(--gris-claro);
         opacity: 0.9;
+        z-index: 3;
         
     }
 .flex-menu-wrapper {
@@ -117,7 +119,7 @@
         align-items: start;
     }
 
-li {
+.flex-menu-item {
         font-size: 1.6rem;
         margin-bottom: 2vh;
         /* background-color: blue; */
