@@ -33,24 +33,24 @@
 </head>
 
 <body>
-   <header class="header">
+    <header class="header">
         <div class="grid">
             <div class="img-logo">
                 <a href="./index.html">
-                    <img class="img" id="logo" src="./assets/img/logo-removebg-preview.png" alt="logo">
+                    <img class="img" id="logo" src="./assets/img/logo-cuadrado-transparente.png" alt="logo">
                 </a>
             </div>
-            <nav class="menu">  
-                <a href="#">
-                    <img class="mobile-menu" src="./assets/icons/menu.png" alt="menu">                        
-                </a>                  
+            <button class="button">
+                <img class="burguer" src="./assets/icons/menu.png">
+            </button>
+            <nav class="menu">
                 <!-- <input class="mobile-menu" type="checkbox" src="assets/img/icons8-menú-30.png"> -->
                 <ul class="flex-menu-wrapper">
-                    <li class="flex-menu-item"><a class="menu-button  text-decoration-none" href="./index.html">Inicio</a></li>
-                    <li class="flex-menu-item"><a class="menu-button  text-decoration-none" href="./menu.html">Menú</a></li>
-                    <li class="flex-menu-item"><a class="menu-button text-decoration-none" href="./sucursales.html">Sucursales</a></li>
-                    <li class="flex-menu-item"><a class="menu-button-first  text-decoration-none" href="./form_registro.html">Registrate</a></li>
-                    <li class="flex-menu-item"><a class="menu-button  text-decoration-none" href="#">Sobre nosotros</a></li>
+                    <li class="flex-menu-item"><a class="menu-button-first" href="./index.html">Inicio</a></li>
+                    <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
+                    <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
+                    <li class="flex-menu-item"><a class="menu-button" href="./form_registro.html">Registrate</a></li>
+                    <li class="flex-menu-item"><a class="menu-button" href="#">Sobre nosotros</a></li>
                 </ul>
             </nav>
         </div>
@@ -63,33 +63,45 @@
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
             </div>
             <div class="formulario">
-                <form style="font-size: 1.2rem;">
+                <!-- el metodo novalidate desactiva la validacion automatica del form
+                usando la API de validacion de restricciones  -->
+                <form style="font-size: 1.2rem;" novalidate> 
                     <!-- <div class="grid"> -->
                     <div class="form-row grid-form">
                         <div class="form-group  form-columna1">
-                            <input type="text" class="form-control mb-2 border-dark" id="inputNombre" autocomplete="false" placeholder="Nombre">
+                            <!-- Nombre -->
+                            <input type="text" class="form-control mb-2 border-dark" id="inputNombre" autocomplete="false" placeholder="Nombre" required>
                             <p class="mensaje-error" id="error-inputNombre">Esto es un error</p>
-                            <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido">
+                            <!-- Apellido -->
+                            <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido" required>
                             <p class="mensaje-error" id="error-inputApellido">Esto es un error</p>
-                            <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email">
+                            <!-- Email -->
+                            <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email" required>
                             <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
                             <!-- <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="nnn-nnn-nnnn" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono"> -->
+                            <!-- Telefono -->
                             <input type="tel" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono">
                             <p class="mensaje-error" id="error-inputTelefono">Esto es un error</p>
-                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Password">
+                            <!-- Password -->
+                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Password" required>
                             <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
-                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Rep Password">
+                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Rep Password" required>
                             <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
-                            <div class="form-check mt-4">
+                            <!-- Suscripción -->
+                            <div class="form-check mt-4 check-suscripcion">
                                 <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">Quiero recibir ofertas</label>
-                            </div>
+                                <label class="form-check-label" for="gridCheck" >Quiero recibir ofertas</label>
+                                <div class="tool-tip">
+                                    <i class="fa-solid fa-circle-info fa-2xs tooltip-icon"></i>
+                                    <span class="tooltip-text"> Recibí un cupón con <strong>20%</strong> de descuento para tu primera compra</span>
+                                </div>
+                            </div> 
                         </div>
                         <div class="form-group  form-columna2">
                             <div>
                                 <div class="form-check mb-2">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">Celiaco</label>
+                                    <label class="form-check-label" for="gridCheck">Celíaco</label>
                                 </div>
                                 <div class="form-check mb-2">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -101,9 +113,9 @@
                                 </div>
                                 <div class="form-check mb-2">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">Diabetico</label>
+                                    <label class="form-check-label" for="gridCheck">Diabético</label>
                                 </div>
-                                <button type="submit" onclick="validarForm()" class="btn btn-primary btn-lg pl-4 pr-4">Registrate</button>
+                                <button type="submit" onclick="validarForm()" class="btn btn-primary btn-lg pl-4 pr-4 boton-registro">Registrate</button>
                             </div>
                         </div>
                     </div>
@@ -165,6 +177,7 @@
    </footer> 
         <!-- referencias a scripts -->
         <script defer src="./assets/js/validador-formulario.js"></script>
+        <script src="./assets/js/menu.js"></script> 
         <!-- --------------------- -->    
 </body>
 </html>

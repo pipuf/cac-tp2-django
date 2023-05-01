@@ -19,27 +19,24 @@
     <link href="./assets/css/header.css" rel="stylesheet">    
     <link href="./assets/css/footer.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
-    <link href="./assets/css/menu.css" rel="stylesheet">
- 
     <!-- ------------------ -->
-
 
     <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
     <title>Naceluja</title>
 </head>
 
 <body>
-    <header class="header">
+   <header class="header">
         <div class="grid">
             <div class="img-logo">
                 <a href="./index.html">
-                    <img class="img" id="logo" src="./assets/img/logo-cuadrado-transparente.png" alt="logo">
+                    <img class="img" id="logo" src="./assets/img/logo-removebg-preview.png" alt="logo">
                 </a>
             </div>
-            <button class="button">
-                <img class="burguer" src="./assets/icons/menu.png">
-            </button>
-            <nav class="menu">
+            <nav class="menu">  
+                <a href="#">
+                    <img class="mobile-menu" src="./assets/icons/menu.png" alt="menu">                        
+                </a>                  
                 <!-- <input class="mobile-menu" type="checkbox" src="assets/img/icons8-menú-30.png"> -->
                 <ul class="flex-menu-wrapper">
                     <li class="flex-menu-item"><a class="menu-button-first" href="./index.html">Inicio</a></li>
@@ -52,81 +49,48 @@
         </div>
    </header>
    <main> 
-    <section class="menu-restaurant">
-        <div class="grid">
-            <section class="texto-menu">
-                 <h1 class="titulo-menu">Menú</h1>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
-            </section>
-            <section class="grid-menu">
-                <div class="menu-card animation-flip">
-                    <div class="menu-card-content animation-flip-content">
-                        <div class="menu-card-front">
-                            <h3 class="titulo-menu-card">Pizza</h3>
-                            <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                        </div>
-                        <div class="menu-card-info animation-flip-info">
-                            <h3 class="titulo-menu-card">Pizza</h3>
-                            <p class="menu-card-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus corrupti voluptates, nobis suscipit ut modi hic vel totam repudiandae!</p>
-                        </div>
+        <section class="carrousel">
+            <div class="grid">
+                <!-- <img src="./assets/img/promo1.png" alt="" class="img-carousel" id="img-carrousel1"> -->
+                <!-- <img src="./assets/img/logo.png" alt="" class="img-carousel" id="img-carrousel2"> -->
+            </div>
+        </section>
+        <section class="services">
+            <div  class="grid">
+                <div class="service-items">
+                    <section class="service-item">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <h3 class="titulo-service">20% OFF de regalo</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>
+                    <section class="service-item">
+                        <i class="fa-solid fa-recycle"></i>
+                        <h3 class="titulo-service">Reciclamos</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>
+                    <section class="service-item">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                        <h3 class="titulo-service">La mejor calidad</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>  
+                </div>
+            </div>
+        </section>
+        <section class="nosotros">
+            <div class="grid">
+                <div class="texto-nosotros">
+                    <h2>Sobre nuestra cocina</h2>
+                    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. A eligendi necessitatibus illo quisquam rem, deserunt perferendis temporibus laborum ullam rerum?</p>
+                    <div class="opciones">
+                        <div class="opcion">Sin TACC</div>
+                        <div class="opcion">Vegetariana</div>
+                        <div class="opcion">Vegana</div>
+                        <div class="opcion">Keto</div>
                     </div>
                 </div>
-                <div class="menu-card animation-slide">
-                    <div class="menu-card-content animation-slide-content">
-                        <div class="menu-card-info animation-slide-info">
-                            <h3 class="titulo-menu-card">Tragos</h3>
-                            <p class="menu-card-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus corrupti voluptates, nobis suscipit ut modi hic vel totam repudiandae!</p>
-                        </div>
-                        <div class="menu-card-front animation-slide-front">
-                            <h3 class="titulo-menu-card">Tragos</h3>
-                            <img src="./assets/img/bebidas.png" alt="" class="img-menu-card">
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-card animation-slide">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/empanadas.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card animation">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/empanadas.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/bebidas.png" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/empanadas.jpg" alt="" class="img-menu-card">
-                </div>
-                <div class="menu-card">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <img src="./assets/img/pizza.jpg" alt="" class="img-menu-card">
-                </div>
-                <!-- <div class="menu-card-info">
-                    <h3 class="titulo-menu-card">Sopa #</h3>
-                    <p class="menu-card-info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus corrupti voluptates, nobis suscipit ut modi hic vel totam repudiandae!</p>
-                </div> -->
-            </section>
-        </div>
-      </section>         
-</main>
+            </div>
+        </section>
+   </main>
    <footer class="footer">
         <div class="grid">
             <div class="footer_columnas">
@@ -177,6 +141,6 @@
                 <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
             </section>            
    </footer> 
-   <script src="./assets/js/menu.js"></script> 
+   <script src="./assets/js/menu.js"></script>  
 </body>
 </html>

@@ -23,8 +23,9 @@
 
     /* Grids Main*/
     --cards-per-row-web:4;
-    --rows-per-page-web:4;
+    --rows-per-page-web:3;
     --menu-card-width:calc(100% / var(--cards-per-row-web));
+    --menu-card-height:calc(100% / var(--rows-per-page-web));
     --column-count:2;
 
 

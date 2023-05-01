@@ -20,19 +20,25 @@ main{
 
 .formulario {
     grid-column: 1/-1;
+
+}
+
+.check-suscripcion{
+    margin: 0 10px;
 }
 
 .grid-form {
     display: grid;
     grid-template-columns: "1fr 1fr";
-    width: 100%;
+    width: 90%;
     /* max-width: 1100px; */
     height: 100%;
     margin: auto;
-    gap: 30px;
+    gap: 50px;
     overflow: hidden;
     align-items: center;
 }
+
 .form-columna1{
     grid-column: 1;
     /* background-color: yellowgreen; */
@@ -42,9 +48,78 @@ main{
     grid-column: 2;
 }
 
+.form-check-label{
+    color: var(--gris-oscuro);
+    font-size: medium;
+}
+
 .mensaje-error{
     font-size: 12px;
     color: red;
     display: none;
     margin: 0px 0px 10px 0px;
+}
+
+
+.tool-tip {
+    display: inline-block;
+    /* background-color: blue; */
+    width: auto;
+    height: auto;
+}
+
+
+.tool-tip .tooltip-icon {
+    display:inline;
+    font-size: 12px;
+}
+
+strong{
+    color: var(--gris-claro)
+}
+
+.tool-tip .tooltip-text {
+    visibility: hidden;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 200px;
+    top: -15px;
+    height: auto;
+    border: 1px dotted var(--gris-oscuro);
+    border-radius: 10px;
+    /* max-width: 50px; */
+    overflow-wrap: normal;
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+    text-align: justify;
+    padding: 5px;
+    font-size: 12px;
+    margin: 0 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tool-tip:hover .tooltip-text {
+    visibility: visible;
+  }
+
+.boton-registro{
+    background-color: var(--rojo);
+    border: 0 ;
+    color: var(--gris-claro)
+}
+
+.boton-registro:hover{
+    background-color: var(--rojo);
+    border: 0 ;
+    color: var(--gris-claro);
+    box-shadow: 3px var(--gris-claro);
+}
+
+.boton-registro:active{
+    background-color: var(--rojo);
+    border: 0 ;
+    color: var(--gris-claro);
+    box-shadow: 3px var(--gris-claro);
 }

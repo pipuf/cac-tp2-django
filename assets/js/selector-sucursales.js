@@ -7,10 +7,10 @@ function elegirSucursal (boton){
     };
     switch(boton.id) {
         case "sucursal1":
-            document.getElementById("mapa-sucursal1").style.display = "block"
+            document.getElementById("mapa-sucursal1").style.display = "inline-block"
           break;
         case "sucursal2":
-           document.getElementById("mapa-sucursal2").style.display = "block"
+           document.getElementById("mapa-sucursal2").style.display = "inline-block"
         break;
         case "sucursal3":
            document.getElementById("mapa-sucursal3").style.display = "inline-block"

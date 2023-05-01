@@ -14,12 +14,12 @@
     width:100px;
     height: auto;
     grid-column: 1/2;
-    padding: 10px
 }
 
 .img-logo > a {
     /* background-color: blue; */
     height: 10px;
+
 }
 
 .img{
@@ -36,24 +36,24 @@
     grid-column: 3/13;
 }
 
-.button{
+.mobile-menu{
     display: none;
 }
 
 .flex-menu-wrapper {
-    display: flex;
+    display: inline-flex;
     width: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
     list-style: none;
-    /* align-items: center; */
+    align-items: center;
     justify-content: flex-end;
 
 }
 
-/* .flex-menu-item{
+.flex-menu-item{
     column-span: 2;
-} */
+}
 
 .flex-menu-item {
     display: inline-block;
@@ -79,48 +79,48 @@
     padding: 5px 10px;
 }
 
-.burguer {
-    width: 4em;
-    height: 4em;
-    /* border: 1px solid green; */
-}
-
-/* .menu button {
-    background-color: var(--secondary-background);
-    float: right;
-} */
-
-
 
 @media only screen and (max-width: 670px){
-.button {
-        cursor: pointer;
-        grid-column: 10/13;
-        display: block;
-        background-color: var(--secondary-background);
+    .menu{
+       grid-column: 12/13; 
+       /* background-color: blue; */
     }
-.menu {
-        display: none;
+    .mobile-menu{
+        display:block; 
+        width: 50px;
+        max-width: 50px;
+        margin: auto;
     }
-.menu.activo {
-        display: flex;
-        position: absolute;
-        padding: 30px;
-        top: 100px;
-        right: 0;
-        background-color: var(--gris-claro);
-        opacity: 0.9;
-        
-    }
-.flex-menu-wrapper {
-        flex-direction: column;
-        align-items: start;
+    .flex-menu-wrapper{
+        display:none;
+        border: 1px solid;
     }
 
-li {
-        font-size: 1.6rem;
-        margin-bottom: 2vh;
-        /* background-color: blue; */
-        
+    .flex-menu-item{
+        display:block;
+        /* border: 3px solid chartreuse; */
+        text-decoration: none;
+        font-size: 1rem;
+        border: 1px 0;
+        background-color: var( --secondary-background);
+        color: var(--secondary-font-color);
+        padding: 5px 10px; 
+        text-align: left;
+        justify-content: left;
     }
+    
+    .menu>a:focus ~ .flex-menu-wrapper{
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
+        justify-content: left;
+        position: absolute;
+        z-index: 1;
+        right: 0px; 
+} 
+.menu-button,.menu-button-first{
+    margin:0;
+    
+}
 }
