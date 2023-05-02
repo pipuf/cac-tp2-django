@@ -126,3 +126,16 @@ main{
       transform: translateX(101%) translateY(0) scaleX(1);
     }
   }
+
+  @media only screen and (min-width: 401px) and (max-width: 670px){
+    .grid-menu{
+        grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-menu{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
