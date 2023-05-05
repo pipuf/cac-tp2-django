@@ -1,4 +1,4 @@
-@import "./style_guide.css";
+@import "./styleGuide.css";
 
 *{
     border: var(--test-border)
@@ -63,7 +63,7 @@
     /* background-color: brown; */
 }
 
-.menu-button-first {
+.menu-button-first, .menu-button-first:hover {
     text-decoration: none;
     font-size: 1rem;
     border: 2px solid var(--main-font-color);
@@ -73,9 +73,10 @@
     padding: 5px 10px;
 }
 
-.menu-button {
+.menu-button, .menu-button:hover {
     text-decoration: none;
     font-size: 1rem;
+    color: var(--main-font-color);
     padding: 5px 10px;
 }
 
@@ -121,8 +122,6 @@
 
 .flex-menu-item {
         font-size: 1.6rem;
-        margin-bottom: 2vh;
-        /* background-color: blue; */
-        
+        margin-bottom: 2vh;        
     }
 }

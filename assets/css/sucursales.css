@@ -14,14 +14,18 @@ main{
 
 .texto-sucursales p{
     margin: 10px 0;
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
     text-align: justify;
+    padding: 20px;
 }
 
-.item-sucursales{
+.selector-sucursales {
+    margin:5px;
+}
+
+.boton-sucursales{
     display: block;
     padding: 10px 25px;
-    margin:5px;
 }
 
 .lista-sucursales {
@@ -34,16 +38,19 @@ main{
 
 }
 
-.item-sucursales{
+.boton-sucursales{
     display: grid;
 }
 
 .frame-mapa{
     display:none;
+    height:100%;
+    width:100%
 }
 
 #mapa-sucursal1  {
     display: inline-block;
+    /* height: 50%; */
 }
 
 #sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
@@ -55,11 +62,35 @@ main{
 }
 
 .mapa-sucursal{
-    grid-column: 3/10;
+    grid-column: 2/10;
     text-align: center;
 }
 
 .datos-sucursal {
     grid-column: 10/13;
-    text-align: center;
+    border: 1px solid;
+    /* text-align: center; */
+}
+
+@media only screen and (min-width: 401px) and (max-width: 670px){
+    .grid-menu{
+        grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media only screen and (max-width: 400px) {
+    .selector-sucursales{
+        grid-column: 1/-1;
+    } 
+    .boton-sucursales {
+        display: inline-block;
+        padding: 10px 15px;
+    }
+    .mapa-sucursal {
+        grid-column: 1/-1;
+    }
+    .datos-sucursal{
+        grid-column: 1/-1;
+    }
 }

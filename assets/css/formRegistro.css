@@ -16,6 +16,7 @@ main{
     margin: 10px 0;
     font-size: 0.8em;
     text-align: justify;
+    padding: 20px;
 }
 
 .formulario {
@@ -57,7 +58,7 @@ main{
     font-size: 12px;
     color: red;
     display: none;
-    margin: 0px 0px 10px 0px;
+    /* margin: 0px 0px 10px 0px; */
 }
 
 
@@ -107,19 +108,64 @@ strong{
 .boton-registro{
     background-color: var(--rojo);
     border: 0 ;
-    color: var(--gris-claro)
+    color: var(--gris-claro);
+    max-width: fit-content;
 }
 
-.boton-registro:hover{
+.boton-registro:disabled{
+    background-color: var(--rojo);
+    border: 0 ;
+    color: var(--gris-claro);    
+    opacity: .8;
+}
+
+.boton-registro:enabled{
+    background-color: var(--rojo);
+    border: 0 ;
+    color: var(--gris-claro);    
+    opacity: 1;
+}
+
+.boton-registro:hover, .boton-registro:active, .boton-registro:focus, .boton-registro:visited{
     background-color: var(--rojo);
     border: 0 ;
     color: var(--gris-claro);
     box-shadow: 3px var(--gris-claro);
 }
 
-.boton-registro:active{
-    background-color: var(--rojo);
-    border: 0 ;
-    color: var(--gris-claro);
-    box-shadow: 3px var(--gris-claro);
+.form-control.invalid{
+    margin: 0 !important;
+    border-color: var(--rojo) !important;
+}
+
+.form-control.invalid ~ .mensaje-error{
+    display: block ;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 670px){
+    
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-form{
+        gap: 0;
+    }
+    .form-group{
+        /* grid-template-columns: "1fr"; */
+        grid-column: 1/-1;
+    } 
+    .check-suscripcion {
+        margin: 0px;
+    }
+    
+    .boton-registro {
+        margin-top: 30px;
+    }
+
+    .tool-tip .tooltip-text {
+        width: 100%;
+        max-width: 130px;
+        top: -100px;
+        right: 0
+    }
 }

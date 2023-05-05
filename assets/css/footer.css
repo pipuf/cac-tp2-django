@@ -1,4 +1,4 @@
-@import "./style_guide.css";
+@import "./styleGuide.css";
 
 .footer{
     background-color: var(--footer-background);

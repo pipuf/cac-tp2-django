@@ -23,13 +23,14 @@
     <link href="./assets/css/header.css" rel="stylesheet">    
     <link href="./assets/css/footer.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
-    <link href="./assets/css/form_registro.css" rel="stylesheet">
+    <link href="./assets/css/formRegistro.css" rel="stylesheet">
  
     <!-- ------------------ -->
 
 
     <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
     <title>Naceluja</title>
+    
 </head>
 
 <body>
@@ -46,10 +47,10 @@
             <nav class="menu">
                 <!-- <input class="mobile-menu" type="checkbox" src="assets/img/icons8-menú-30.png"> -->
                 <ul class="flex-menu-wrapper">
-                    <li class="flex-menu-item"><a class="menu-button" href="./index.html">Inicio</a></li>
+                    <li class="flex-menu-item"><a class="menu-button text-decoration-none" href="./index.html">Inicio</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
-                    <li class="flex-menu-item"><a class="menu-button-first" href="./form_registro.html">Registrate</a></li>
+                    <li class="flex-menu-item"><a class="menu-button-first" href="./formRegistro.html">Registrate</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="#">Sobre nosotros</a></li>
                 </ul>
             </nav>
@@ -59,67 +60,93 @@
     <section class="form-registro">
         <div class="grid">
             <div class="texto-registro">
-                 <h1 class="titulo-registro">Registrate</h1>
+                 <!-- <h1 class="titulo-registro">Registrate</h1> -->
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
             </div>
             <div class="formulario">
                 <!-- el metodo novalidate desactiva la validacion automatica del form
                 usando la API de validacion de restricciones  -->
-                <form style="font-size: 1.2rem;" novalidate> 
+                <form id="form-registro" action="" style="font-size: 1.2rem;" novalidate> 
                     <!-- <div class="grid"> -->
                     <div class="form-row grid-form">
                         <div class="form-group  form-columna1">
                             <!-- Nombre -->
-                            <input type="text" class="form-control mb-2 border-dark" id="inputNombre" autocomplete="false" placeholder="Nombre" required>
-                            <p class="mensaje-error" id="error-inputNombre">Esto es un error</p>
+                            <div class="form-field">
+                                <input type="text" class="form-control mb-2 border-dark" id="inputNombre" autocomplete="false" placeholder="Nombre" required>
+                                <p class="mensaje-error" id="error-inputNombre">Esto es un error</p>
+                            </div>
                             <!-- Apellido -->
-                            <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido" required>
-                            <p class="mensaje-error" id="error-inputApellido">Esto es un error</p>
+                            <div class="form-field">
+                                <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido" required>
+                                 <p class="mensaje-error" id="error-inputApellido">Esto es un error</p>
+                            </div>
                             <!-- Email -->
-                            <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email" required>
-                            <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
+                            <div class="form-field">
+                                <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email" required>
+                                <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
+                            </div>
                             <!-- <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="nnn-nnn-nnnn" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono"> -->
                             <!-- Telefono -->
-                            <input type="tel" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono">
-                            <p class="mensaje-error" id="error-inputTelefono">Esto es un error</p>
+                            <div class="form-field">
+                                <input type="tel" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono">
+                                <p class="mensaje-error" id="error-inputTelefono">Esto es un error</p>
+                            </div>
                             <!-- Password -->
-                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Password" required>
-                            <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
-                            <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Rep Password" required>
-                            <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
+                            <div class="form-field">
+                                <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Password" required>
+                                <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
+                            </div>
+                            <div class="form-field">    
+                                <input type="password" class="form-control mb-2 border-dark" id="inputPassword2" placeholder="Rep Password" required>
+                                <p class="mensaje-error" id="error-inputPassword2">Esto es un error</p>
+                            </div>
                             <!-- Suscripción -->
-                            <div class="form-check mt-4 check-suscripcion">
+                            <!-- <div class="form-check mt-4 check-suscripcion">
                                 <input class="form-check-input" type="checkbox" id="gridCheck">
                                 <label class="form-check-label" for="gridCheck" >Quiero recibir ofertas</label>
                                 <div class="tool-tip">
                                     <i class="fa-solid fa-circle-info fa-2xs tooltip-icon"></i>
                                     <span class="tooltip-text"> Recibí un cupón con <strong>20%</strong> de descuento para tu primera compra</span>
                                 </div>
-                            </div> 
+                            </div>  -->
                         </div>
                         <div class="form-group  form-columna2">
                             <div>
                                 <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
                                     <label class="form-check-label" for="gridCheck">Celíaco</label>
                                 </div>
                                 <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2">
                                     <label class="form-check-label" for="gridCheck">Vegetariano</label>    
                                 </div>
                                 <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck3">
                                     <label class="form-check-label" for="gridCheck">Vegano</label>
                                 </div>
                                 <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck4">
                                     <label class="form-check-label" for="gridCheck">Diabético</label>
                                 </div>
-                                <button type="submit" onclick="validarForm()" class="btn btn-primary btn-lg pl-4 pr-4 boton-registro">Registrate</button>
+                                <!-- <button id="botonSubmit" type="submit" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Registrate</button>
+                                <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
+
                             </div>
                         </div>
+                        <!-- Suscripción -->
+                        <div class="form-check mt-4 check-suscripcion">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck" >Quiero recibir ofertas</label>
+                            <div class="tool-tip">
+                                <i class="fa-solid fa-circle-info fa-2xs tooltip-icon"></i>
+                                <span class="tooltip-text"> Recibí un cupón con <strong>20%</strong> de descuento para tu primera compra</span>
+                            </div>
+                        </div> 
+                        <button id="botonSubmit" type="submit" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Registrate</button>
+                        <!-- <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
+
                     </div>
-                <!-- </div> -->
+                    <!-- </div> -->
                 </form>
             </div>
         </div>
@@ -176,8 +203,9 @@
         </section>            
 </footer> 
         <!-- referencias a scripts -->
-        <script defer src="./assets/js/validador-formulario.js"></script>
+        <script defer src="./assets/js/formValidator.js"></script>
         <script src="./assets/js/menu.js"></script> 
         <!-- --------------------- -->    
+ 
 </body>
 </html>

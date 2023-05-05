@@ -1,4 +1,4 @@
-@import "./style_guide.css";
+@import "./styleGuide.css";
 
 *{
     border: var(--test-border);
@@ -108,7 +108,7 @@ main{
 /* Puntos de corte sitio responsive */
 @media only screen and (max-width: 670px){
   .service-item, .opcion {
-        width: 60%;
+        width: 80%;
         margin: 20px 0;
     }
 
