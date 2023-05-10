@@ -16,6 +16,11 @@ function formatoTelefono(campoForm){
     return regEx.test(campoForm.value)
 }
 
+function formatoEmail (campoForm){
+    const regEx= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regEx.test(campoForm.value)
+}
+
 function passwordMatch(password1,password2){
 console.log("estoy en password match")
     return password1.value===password2.value;
@@ -30,11 +35,6 @@ function formatoPassword(campoForm){
     // No espacios en blanco
     // Al menos 1 caracter especial
     const regEx= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
-    return regEx.test(campoForm.value)
-}
-
-function formatoEmail (campoForm){
-    const regEx= /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regEx.test(campoForm.value)
 }
 
@@ -71,26 +71,26 @@ function validar(callback,campoForm,textoError,tipoMensaje,inlineErrorID,campoFo
 
 function validarNombre(campoForm){
    return validar(esRequerido,campoForm,"Tenés que ingresar el nombre","inline","error-inputNombre") &&
-   validar(formatoNombre,campoForm,"El nombre solo puede tener letras, guiones y espacios","inline","error-inputNombre")
+          validar(formatoNombre,campoForm,"El nombre solo puede tener letras, guiones y espacios","inline","error-inputNombre")
 }
 
 function validarApellido(campoForm){
     return validar(esRequerido,campoForm,"Tenés que ingresar el apellido","inline","error-inputApellido") &&
-    validar(formatoNombre,campoForm,"El apellido solo puede tener letras, guiones y espacios","inline","error-inputApellido")   
+           validar(formatoNombre,campoForm,"El apellido solo puede tener letras, guiones y espacios","inline","error-inputApellido")   
  }
 
  function validarEmail(campoForm){
     return validar(esRequerido,campoForm,"Tenés que ingresar el email","inline","error-inputEmail") &&
-    validar(formatoEmail,campoForm,"Esto no es un email","inline","error-inputEmail")   
+           validar(formatoEmail,campoForm,"Esto no es un email","inline","error-inputEmail")   
  }
 
  function validarPassword(password1,password2) {
     return validar(esRequerido,password1,"Tenés que ingresar el password","inline","error-inputPassword1") &&
-    validar(esRequerido,password2,"Tenés que confirmar el password","inline","error-inputPassword2")  &&
-    validar(formatoPassword,password1,"El formato del password no es válido","inline","error-inputPassword1") &&
-    validar(formatoPassword,password2,"El formato del password no es válido","inline","error-inputPassword2") &&
-    validar(passwordMatch,password1,"Los passwords no coinciden","inline","error-inputPassword1",password2)   
- 
+           validar(esRequerido,password2,"Tenés que confirmar el password","inline","error-inputPassword2")  &&
+           validar(formatoPassword,password1,"El formato del password no es válido","inline","error-inputPassword1") &&
+           validar(formatoPassword,password2,"El formato del password no es válido","inline","error-inputPassword2") &&
+           validar(passwordMatch,password1,"Los passwords no coinciden","inline","error-inputPassword1",password2)   
+        
  }
 
  function validarTelefono(campoForm){
