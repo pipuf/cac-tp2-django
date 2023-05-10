@@ -111,21 +111,21 @@ function validarApellido(campoForm){
 
  function validarForm(e,miDoc){
     let esValido=true;
-    let inputNombre = 
 
     e.preventDefault();
 
     clearErrors(miDoc)
 
-    esValid = validarNombre(document.getElementById('inputNombre')) && esValido
-    esValid = validarApellido(document.getElementById('inputApellido')) && esValido
-    esValid = validarEmail(document.getElementById('inputEmail'))  && esValido
-    esValid = validarPassword(document.getElementById('inputPassword1'),document.getElementById('inputPassword2')) && esValido
-    esValid = validarTelefono(document.getElementById('inputTelefono')) && esValido
+    esValido = validarNombre(document.getElementById('inputNombre')) && esValido
+    esValido = validarApellido(document.getElementById('inputApellido')) && esValido
+    esValido = validarEmail(document.getElementById('inputEmail'))  && esValido
+    esValido = validarPassword(document.getElementById('inputPassword1'),document.getElementById('inputPassword2')) && esValido
+    esValido = validarTelefono(document.getElementById('inputTelefono')) && esValido
 
-    if (esValido)
+    if (esValido){
         clearForm(miForm)
         alert ("Tus datos ya fueron enviados")
+    }
 }
 
 
