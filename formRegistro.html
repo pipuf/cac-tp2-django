@@ -80,16 +80,15 @@
                                 <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido" required>
                                  <p class="mensaje-error" id="error-inputApellido">Esto es un error</p>
                             </div>
-                            <!-- Email -->
-                            <div class="form-field">
-                                <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email" required>
-                                <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
-                            </div>
-                            <!-- <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="nnn-nnn-nnnn" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono"> -->
                             <!-- Telefono -->
                             <div class="form-field">
                                 <input type="tel" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono">
                                 <p class="mensaje-error" id="error-inputTelefono">Esto es un error</p>
+                            </div>
+                            <!-- Email -->
+                            <div class="form-field">
+                                <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email" required>
+                                <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
                             </div>
                             <!-- Password -->
                             <div class="form-field">
@@ -206,6 +205,10 @@
         <script defer src="./assets/js/formValidator.js"></script>
         <script src="./assets/js/menu.js"></script> 
         <!-- --------------------- -->    
+
+        <!-- Mailchimp integration -->
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/e412ce586b5075a950bd0189a/4094cd0fc5decab6cde855738.js");</script>
+        <!-- --------------------- -->
  
 </body>
 </html>
