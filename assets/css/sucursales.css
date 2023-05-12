@@ -34,6 +34,7 @@ main{
 
 .mapa-sucursal{
     display: inline-block;
+    height:50vh;
 }
 
 /* .boton-sucursales{
@@ -91,6 +92,7 @@ main{
     .datos-sucursal{
         grid-column: 2/12;
         margin: 0 auto;
+        grid-row: 4;
     }
 }
 
@@ -111,5 +113,6 @@ main{
     .datos-sucursal{
         grid-column: 2/12;
         margin: 0 auto;
+        grid-row: 4
     }
 }
