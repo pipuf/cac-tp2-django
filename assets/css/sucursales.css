@@ -98,6 +98,7 @@ main{
     .boton-sucursales {
         display: inline-block;
         padding: 10px 15px;
+        margin:2px
 
     }
     .mapa-sucursal {
@@ -126,6 +127,7 @@ main{
     .boton-sucursales {
         display: inline-block;
         padding: 10px 15px;
+        margin: 2px;
     }
     .mapa-sucursal {
         grid-column: 2/12;
