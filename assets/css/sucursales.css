@@ -94,6 +94,10 @@ main{
         margin: 0 auto;
         grid-row: 3;
     }
+    #separador {
+        border: 2px solid var(--rojo);
+        margin: 2vh 0 1vh 0;
+    }
 }
 
 
@@ -114,5 +118,9 @@ main{
         grid-column: 2/12;
         margin: 0 auto;
         grid-row: 3 
+    }
+    #separador {
+        border: 2px solid var(--rojo);
+        margin: 2vh 0 1vh 0;
     }
 }
