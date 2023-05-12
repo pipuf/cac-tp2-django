@@ -86,8 +86,8 @@ function validarApellido(campoForm){
 
  function validarPassword(password1,password2) {
     return validar(esRequerido,password1,"Tenés que ingresar el password","inline","error-inputPassword1") &&
-           validar(esRequerido,password2,"Tenés que confirmar el password","inline","error-inputPassword2")  &&
            validar(formatoPassword,password1,"El formato del password no es válido","inline","error-inputPassword1") &&
+           validar(esRequerido,password2,"Tenés que confirmar el password","inline","error-inputPassword2")  &&
            validar(formatoPassword,password2,"El formato del password no es válido","inline","error-inputPassword2") &&
            validar(passwordMatch,password1,"Los passwords no coinciden","inline","error-inputPassword1",password2)   
         
@@ -109,8 +109,17 @@ function validarApellido(campoForm){
  
  }
 
+ function enviarCorreo(eMail){
+    let textoEmail=""
+//     textoEmail = "mailto:" + eMail
+//                + "?subject=" + "Tu cupón de descuento"
+//                + "&body=" + insTextoComp;
+//    window.location.href = sLink;
+ }
+
  function validarForm(e,miDoc){
     let esValido=true;
+    let eMail=document.getElementById('inputEmail')
 
     e.preventDefault();
 
@@ -118,12 +127,17 @@ function validarApellido(campoForm){
 
     esValido = validarNombre(document.getElementById('inputNombre')) && esValido
     esValido = validarApellido(document.getElementById('inputApellido')) && esValido
-    esValido = validarEmail(document.getElementById('inputEmail'))  && esValido
+    esValido = validarEmail(eMail)  && esValido
     esValido = validarPassword(document.getElementById('inputPassword1'),document.getElementById('inputPassword2')) && esValido
     esValido = validarTelefono(document.getElementById('inputTelefono')) && esValido
 
     if (esValido){
+        clearErrors(miDoc)
         clearForm(miForm)
+        if (document.getElementById('gridCheck').value) {
+            enviarCorreo(eMail.value)
+            alert("mandar correo")
+        }
         alert ("Tus datos ya fueron enviados")
     }
 }

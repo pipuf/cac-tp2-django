@@ -4,7 +4,7 @@ main{
 
 .sucursales{
     height: auto;
-    padding-bottom: 60px;
+    padding-bottom: 60px;  
 }
 
 .texto-sucursales{
@@ -20,27 +20,25 @@ main{
 }
 
 .selector-sucursales {
-    margin:5px;
+    margin:5px 0px 0px 20px;
 }
 
 .boton-sucursales{
     display: block;
     padding: 10px 25px;
-}
-
-.lista-sucursales {
-    display: inline-block;
-    
+    display: grid;
+    width: 133px;
+    /* text-align: left; */
+    /* background-color: var(--gris-claro); */
 }
 
 .mapa-sucursal{
     display: inline-block;
-
 }
 
-.boton-sucursales{
-    display: grid;
-}
+/* .boton-sucursales{
+
+} */
 
 .frame-mapa{
     display:none;
@@ -53,44 +51,64 @@ main{
     /* height: 50%; */
 }
 
-#sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
+/* #sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
     display: inline-block;
 }
 
 #sucursal2:focus ~ .mapa-sucursal > #mapa-sucursal2  {
     display: inline-block;
-}
+} */
 
 .mapa-sucursal{
-    grid-column: 2/10;
+    grid-column: 4/10;
     text-align: center;
 }
 
 .datos-sucursal {
-    grid-column: 10/13;
-    border: 1px solid;
+    grid-column: 5/9;
+    /* border: 1px solid; */
     /* text-align: center; */
 }
 
-@media only screen and (min-width: 401px) and (max-width: 670px){
-    .grid-menu{
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width: 401px){
+    .selector-sucursales{
+        grid-column: 2/12;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    } 
 
-}
+    .boton-sucursales {
+        display: inline-block;
+        padding: 10px 15px;
+
+    }
+    .mapa-sucursal {
+        grid-column: 2/12;
+        margin-top: 10px;
+    }
+    .datos-sucursal{
+        grid-column: 2/12;
+        margin: 0 auto;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
     .selector-sucursales{
         grid-column: 1/-1;
+        margin: 0 auto;
     } 
     .boton-sucursales {
         display: inline-block;
         padding: 10px 15px;
     }
     .mapa-sucursal {
-        grid-column: 1/-1;
+        grid-column: 2/12;
+        margin-top: 10px;
     }
     .datos-sucursal{
-        grid-column: 1/-1;
+        grid-column: 2/12;
+        margin: 0 auto;
     }
 }
