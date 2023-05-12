@@ -28,6 +28,7 @@ main{
     padding: 10px 25px;
     display: grid;
     width: 133px;
+    margin: 10px
     /* text-align: left; */
     /* background-color: var(--gris-claro); */
 }
@@ -52,6 +53,19 @@ main{
     /* height: 50%; */
 }
 
+.boton-sucursales:hover{
+    background-color: gray;
+    color: var(--gris-claro);
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+.boton-sucursales:focus{
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+  
+}
+
 /* #sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
     display: inline-block;
 }
@@ -68,7 +82,8 @@ main{
 .datos-sucursal {
     grid-column: 3/6;
     grid-row: 2;
-    /* border: 1px solid; */
+    border-left: 4px solid var(--rojo);
+    padding: 1vw
     /* text-align: center; */
 }
 
@@ -93,6 +108,8 @@ main{
         grid-column: 2/12;
         margin: 0 auto;
         grid-row: 3;
+        border-left: 0;
+
     }
     #separador {
         border: 2px solid var(--rojo);
@@ -117,7 +134,8 @@ main{
     .datos-sucursal{
         grid-column: 2/12;
         margin: 0 auto;
-        grid-row: 3 
+        grid-row: 3;
+        border-left: 0;
     }
     #separador {
         border: 2px solid var(--rojo);

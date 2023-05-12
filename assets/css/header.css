@@ -67,7 +67,7 @@
     text-decoration: none;
     font-size: 1rem;
     border: 2px solid var(--main-font-color);
-    border-radius: 13px;
+    border-radius: 5px;
     background-color: var( --main-font-color);
     color: var(--secondary-font-color);
     padding: 5px 10px;
