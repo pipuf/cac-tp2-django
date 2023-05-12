@@ -60,12 +60,13 @@ main{
 } */
 
 .mapa-sucursal{
-    grid-column: 4/10;
+    grid-column: 6/12;
     text-align: center;
 }
 
 .datos-sucursal {
-    grid-column: 5/9;
+    grid-column: 3/6;
+    grid-row: 2;
     /* border: 1px solid; */
     /* text-align: center; */
 }
