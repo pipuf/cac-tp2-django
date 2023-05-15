@@ -34,8 +34,8 @@
 }
 
 .footer-column-titulo{
- text-align: center;
- margin-top: 5px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .footer-column-content {
@@ -47,7 +47,7 @@
 .social-icons{
         grid-column: 1/-1;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-wrap: wrap;
 }
 
@@ -55,6 +55,7 @@
 /* [class^="fa-brands"]{ */
 .cv{
     font-size: 20px;
+    margin:auto;
     text-align: center;
     width: 22%;
     padding: 10px;

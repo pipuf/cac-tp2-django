@@ -30,7 +30,6 @@ main{
     display: grid;
     grid-template-columns: repeat(var(--form-column-count-web), 1fr);
     width: 90%;
-    /* max-width: 1100px; */
     height: 100%;
     margin: auto;
     gap: 50px;

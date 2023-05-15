@@ -22,7 +22,6 @@ function formatoEmail (campoForm){
 }
 
 function passwordMatch(password1,password2){
-console.log("estoy en password match")
     return password1.value===password2.value;
 }
 
@@ -85,11 +84,11 @@ function validarApellido(campoForm){
  }
 
  function validarPassword(password1,password2) {
-    return validar(esRequerido,password1,"Tenés que ingresar el password","inline","error-inputPassword1") &&
-           validar(formatoPassword,password1,"El formato del password no es válido","inline","error-inputPassword1") &&
-           validar(esRequerido,password2,"Tenés que confirmar el password","inline","error-inputPassword2")  &&
-           validar(formatoPassword,password2,"El formato del password no es válido","inline","error-inputPassword2") &&
-           validar(passwordMatch,password1,"Los passwords no coinciden","inline","error-inputPassword1",password2)   
+    return validar(esRequerido,password1,"Tenés que ingresar la contraseña","inline","error-inputPassword1") &&
+           validar(formatoPassword,password1,"El formato de la contraseña no es válido","inline","error-inputPassword1") &&
+           validar(esRequerido,password2,"Tenés que confirmar la contraseña","inline","error-inputPassword2")  &&
+           validar(formatoPassword,password2,"El formato de la contraseña no es válido","inline","error-inputPassword2") &&
+           validar(passwordMatch,password1,"Las contraseñas no coinciden","inline","error-inputPassword1",password2)   
         
  }
 

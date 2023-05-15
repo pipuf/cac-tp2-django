@@ -24,10 +24,9 @@ main{
 .boton-sucursales{
     display: block;
     padding: 10px 25px;
-    display: grid;
+    /* display: grid; */
     width: 133px;
     margin: 10px
-
 }
 
 .mapa-sucursal{
