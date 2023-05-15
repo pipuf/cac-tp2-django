@@ -14,8 +14,6 @@ main{
 
 .texto-sucursales p{
     margin: 10px 0;
-    /* font-size: 0.8em; */
-    text-align: justify;
     padding: 20px;
 }
 
@@ -29,8 +27,7 @@ main{
     display: grid;
     width: 133px;
     margin: 10px
-    /* text-align: left; */
-    /* background-color: var(--gris-claro); */
+
 }
 
 .mapa-sucursal{
@@ -38,41 +35,17 @@ main{
     height:50vh;
 }
 
-/* .boton-sucursales{
-
-} */
-
 .frame-mapa{
-    display:none;
     height:100%;
     width:100%
 }
 
-#mapa-sucursal1  {
-    display: inline-block;
-    /* height: 50%; */
-}
-
 .boton-sucursales:hover{
-    background-color: gray;
-    color: var(--gris-claro);
-    /* border-radius: 5px; */
+    background-color: var(--gris-oscuro);
+    color: var(--secondary-font-color);
+    border-radius: 5px;
     cursor: pointer;
 }
-
-.boton-sucursales:focus{
-    background-color: var(--gris-oscuro);
-    color: var(--gris-claro);
-  
-}
-
-/* #sucursal1:focus ~ .mapa-sucursal ~ .grid> #mapa-sucursal1  {
-    display: inline-block;
-}
-
-#sucursal2:focus ~ .mapa-sucursal > #mapa-sucursal2  {
-    display: inline-block;
-} */
 
 .mapa-sucursal{
     grid-column: 6/12;
@@ -84,7 +57,10 @@ main{
     grid-row: 2;
     border-left: 4px solid var(--rojo);
     padding: 1vw
-    /* text-align: center; */
+}
+
+#nombre-sucursal{
+    text-align: left;
 }
 
 @media only screen and (max-width: 559px){

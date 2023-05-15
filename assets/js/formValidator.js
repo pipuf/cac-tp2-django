@@ -94,8 +94,7 @@ function validarApellido(campoForm){
  }
 
  function validarTelefono(campoForm){
-    return validar(esRequerido,campoForm,"Tenés que ingresar el teléfono","inline","error-inputTelefono") &&
-    validar(formatoTelefono,campoForm,"Esto no es un teléfono","inline","error-inputTelefono")   
+    return validar(formatoTelefono,campoForm,"Esto no es un teléfono","inline","error-inputTelefono")   
  }
 
  function clearForm(miDoc){

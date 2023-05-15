@@ -1,4 +1,4 @@
-const menuBoton = document.querySelector('.button')
+const menuBoton = document.querySelector('.button-burguer')
 const menuNav = document.querySelector('.menu')
 
 menuBoton.addEventListener('click',

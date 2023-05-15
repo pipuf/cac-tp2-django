@@ -14,8 +14,6 @@ main{
 
 .texto-registro p{
     margin: 10px 0;
-    font-size: 0.8em;
-    text-align: justify;
     padding: 20px;
 }
 
@@ -30,19 +28,19 @@ main{
 
 .grid-form {
     display: grid;
-    grid-template-columns: "1fr 1fr";
+    grid-template-columns: repeat(var(--form-column-count-web), 1fr);
     width: 90%;
     /* max-width: 1100px; */
     height: 100%;
     margin: auto;
     gap: 50px;
+    row-gap: 10px;
     overflow: hidden;
     align-items: center;
 }
 
 .form-columna1{
     grid-column: 1;
-    /* background-color: yellowgreen; */
 }
 
 .form-columna2{
@@ -50,21 +48,19 @@ main{
 }
 
 .form-check-label{
-    color: var(--gris-oscuro);
-    font-size: medium;
+    color: var(--main-font-color);
+    font-size: var(--p-font-size);
 }
 
 .mensaje-error{
-    font-size: 12px;
-    color: red;
+    font-size: var(--small-font-size);
+    color: var(--rojo);
     display: none;
-    /* margin: 0px 0px 10px 0px; */
 }
 
 
 .tool-tip {
     display: inline-block;
-    /* background-color: blue; */
     width: auto;
     height: auto;
 }
@@ -72,7 +68,7 @@ main{
 
 .tool-tip .tooltip-icon {
     display:inline;
-    font-size: 12px;
+    font-size: var(--teeny-font-size);
 }
 
 strong{
@@ -89,13 +85,12 @@ strong{
     height: auto;
     border: 1px dotted var(--gris-oscuro);
     border-radius: 10px;
-    /* max-width: 50px; */
     overflow-wrap: normal;
     background-color: var(--gris-oscuro);
-    color: var(--gris-claro);
+    color: var(--secondary-font-color);
     text-align: justify;
     padding: 5px;
-    font-size: 12px;
+    font-size: var(--teeny-font-size);
     margin: 0 10px;
     position: absolute;
     z-index: 1;
@@ -129,8 +124,12 @@ strong{
 .boton-registro:hover, .boton-registro:active, .boton-registro:focus, .boton-registro:visited{
     background-color: var(--rojo);
     border: 0 ;
-    color: var(--gris-claro);
+    color: var(--secondary-font-color);
     box-shadow: 3px var(--gris-claro);
+}
+
+.form-control:focus{
+    box-shadow: var(--rojo)!important
 }
 
 .form-control.invalid{
@@ -151,7 +150,6 @@ strong{
         gap: 0;
     }
     .form-group{
-        /* grid-template-columns: "1fr"; */
         grid-column: 1/-1;
     } 
     .check-suscripcion {

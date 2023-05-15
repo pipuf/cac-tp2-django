@@ -7,7 +7,7 @@
 /* Estilos del header */
 .header{
     height:100px;
-    background-color: var(--secondary-background);
+    background-color: var(--header-background-color);
 }
 
 .img-logo{
@@ -18,14 +18,12 @@
 }
 
 .img-logo > a {
-    /* background-color: blue; */
     height: 10px;
 }
 
 .img{
     width: 95%;
     max-width: 400px;
-
 }
 
 #logo{
@@ -36,46 +34,38 @@
     grid-column: 5/13;
 }
 
-.button{
+.button-burguer{
     display: none;
 }
 
 .flex-menu-wrapper {
     display: flex;
     width: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
     list-style: none;
-    /* align-items: center; */
     justify-content: flex-end;
 
 }
-
-/* .flex-menu-item{
-    column-span: 2;
-} */
 
 .flex-menu-item {
     display: inline-block;
     margin-right: 2vw;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: brown; */
 }
 
 .menu-button-first, .menu-button-first:hover {
     text-decoration: none;
-    font-size: 1rem;
-    border: 2px solid var(--main-font-color);
+    font-size: var(--nav-button-font-size);
+    border: 2px solid var(--selection-background-color);
     border-radius: 5px;
-    background-color: var( --main-font-color);
+    background-color: var(--selection-background-color);
     color: var(--secondary-font-color);
     padding: 5px 10px;
 }
 
 .menu-button, .menu-button:hover {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: var(--nav-button-font-size);
     color: var(--main-font-color);
     padding: 5px 10px;
 }
@@ -83,23 +73,17 @@
 .burguer {
     width: 4em;
     height: 4em;
-    /* border: 1px solid green; */
 }
-
-/* .menu button {
-    background-color: var(--secondary-background);
-    float: right;
-} */
 
 
 /* Puntos de corte sitio responsive */
 @media only screen and (max-width: 730px){
 /* Menu hamburguesa */
-.button {
+.button-burguer {
         cursor: pointer;
         grid-column: 10/13;
         display: block;
-        background-color: var(--secondary-background);
+        background-color: var(--header-background-color);
     }
 .menu {
         display: none;
@@ -108,12 +92,12 @@
         display: flex;
         position: absolute;
         padding: 30px;
+        padding-bottom: 15px;
         top: 100px;
         right: 0;
-        background-color: var(--gris-claro);
+        background-color: var(--main-background-color);
         opacity: 0.9;
         z-index: 3;
-        
     }
 .flex-menu-wrapper {
         flex-direction: column;
@@ -121,7 +105,8 @@
     }
 
 .flex-menu-item {
-        font-size: 1.6rem;
-        margin-bottom: 2vh;        
+        font-size: var(--nav-button-font-size);;
+        margin-bottom: 3vh; 
+        
     }
 }

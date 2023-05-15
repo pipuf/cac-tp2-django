@@ -5,13 +5,12 @@
 }
 
 body{
-    background-color: var(--main-background);
+    background-color: var(--main-background-color);
 }
 
-/* .grid, .grid-services { */
 .grid{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(var(--main-column-count), 1fr);
     width: 100%;
     max-width: 100vw;
     height: 100%;
@@ -37,8 +36,7 @@ main{
 
 .services{
     /* height:; */
-    background: linear-gradient(180deg, var(--gris-claro) 50%,var(--service-background) 50%);
-    /* background: var(--secondary-background); */
+    background: linear-gradient(180deg, var(--main-background-color) 50%,var(--secondary-background-color) 50%);
 }
 
 .service-items{
@@ -55,8 +53,8 @@ main{
 .service-item{
     width: 30%;
     height: 250px;
-    background: var(--main-background);
-    box-shadow: 0 0 6px var(--color-shadow);
+    background: var(--main-background-color);
+    box-shadow: 0 0 6px var(--color-shadow-color);
     overflow: hidden;
     padding: 10px 20px;
     text-align: center;
@@ -73,7 +71,7 @@ main{
 }
 
 .nosotros{
-    background-color: var(--service-background);
+    background-color: var(--secondary-background-color);
     height: auto;
     padding-bottom: 60px;
 }
@@ -84,7 +82,7 @@ main{
 }
 
 .texto-nosotros .parrafo{
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .opciones{
@@ -101,7 +99,6 @@ main{
     width: 22%;
     border-top: 1px solid var(--gris-oscuro);
     border-bottom: 1px solid var(--gris-oscuro);
-    /* border-radius: 15px; */
     padding: 10px;
 }
 
