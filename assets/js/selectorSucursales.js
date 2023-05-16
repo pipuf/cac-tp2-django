@@ -1,14 +1,12 @@
-function elegirSucursal (boton){
+function elegirSucursal (nombreBoton){
     // Cambia el contenido del iframe (google maps) y de la info de la sucursal segun la seleccion
     var sucursal = {
       mapa: '',
       nombre: '',
       direccion: ''
     }
-
-    
-
-    switch(boton.id) {
+ 
+    switch(nombreBoton) {
         case "sucursal1":
             sucursal.mapa = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.021712663224!2d-58.383133553714536!3d-34.603612460110654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1680238886168!5m2!1ses-419!2sar"
             sucursal.nombre="Sucursal Obelisco"
@@ -36,3 +34,13 @@ function elegirSucursal (boton){
       document.getElementById("nombre-sucursal").innerText=sucursal.nombre
       document.getElementById("info-sucursal").innerText=sucursal.direccion
 }
+
+document.getElementById('sucursal1').addEventListener('click',()=>{elegirSucursal("sucursal1")})
+document.getElementById('sucursal2').addEventListener('click',()=>{elegirSucursal("sucursal2")})
+document.getElementById('sucursal3').addEventListener('click',()=>{elegirSucursal("sucursal3")})
+document.getElementById('sucursal4').addEventListener('click',()=>{elegirSucursal("sucursal4")})
+
+document.getElementById('sucursal1').addEventListener('touchend',()=>{elegirSucursal("sucursal1")})
+document.getElementById('sucursal2').addEventListener('touchend',()=>{elegirSucursal("sucursal2")})
+document.getElementById('sucursal3').addEventListener('touchend',()=>{elegirSucursal("sucursal3")})
+document.getElementById('sucursal4').addEventListener('touchend',()=>{elegirSucursal("sucursal4")})
