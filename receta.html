@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- ------------ -->
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/fa89224564.js" crossorigin="anonymous"></script>
+    <!-- ------------------ -->
+   
+    <!-- Author stylesheets -->
+    <link href="./assets/css/header.css" rel="stylesheet">    
+    <link href="./assets/css/footer.css" rel="stylesheet">
+    <link href="./assets/css/receta.css" rel="stylesheet">
+    <link href="./assets/css/sucursales.css" rel="stylesheet">
+    
+    <!-- ------------------ -->
+
+    <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
+        <title>Naceluja</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="grid">
+                <div class="img-logo">
+                    <a href="./index.html">
+                        <img class="img" id="logo" src="./assets/img/logo-cuadrado-transparente.png" alt="logo">
+                    </a>
+                </div>
+                <button class="button-burguer">
+                    <img class="burguer" src="./assets/icons/menu.png">
+                </button>
+                <nav class="menu">
+                    <!-- <input class="mobile-menu" type="checkbox" src="assets/img/icons8-menú-30.png"> -->
+                    <ul class="flex-menu-wrapper">
+                        <li class="flex-menu-item"><a class="menu-button" href="./index.html">Inicio</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
+                        <li class="flex-menu-item"><a class="menu-button" href="./formRegistro.html">Registrate</a></li>
+                        <li class="flex-menu-item"><a class="menu-button-first" href="./receta.html">Receta del día</a></li>
+                        <!-- <li class="flex-menu-item"><a class="menu-button" href="#">Sobre nosotros</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+       </header>
+        <main> 
+            <section class="receta-del-dia">
+                <div  id="app">
+                    <!-- <h3>Receta del día</h3> -->
+                    <div v-if="nombre != null">
+                        <div>
+                            <!-- <h4 class="nombre-receta-del-dia">{{nombre}}</h4> -->
+                            <!-- <img :src=img alt="" class="img-receta-del-dia"> -->
+                             <div class="receta animation-flip">
+                                <div class="menu-card-content animation-flip-content">
+                                    <div class="menu-card-front grid-receta-del-dia">
+                                        <h4 class="titulo-receta-del-dia">{{nombre}}</h4>
+                                        <img :src=img alt="" class="img-receta-del-dia">
+                                    </div>
+                                    <div class="menu-card-info grid-receta-del-dia animation-flip-info">
+                                        <h4 class="titulo-receta-del-dia">{{nombre}}</h4>
+                                        <h5 id="ingredientes">Ingredientes</h5>
+                                        <ul class="ingredientes-receta-del-dia">
+                                            <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
+                                                <li v-if="ingrediente !=''">
+                                                    {{ ingrediente }}
+                                                </li>
+                                            </div>
+                                        </ul>
+                                        <h5 id="preparacion">Preparación</h5>                                   
+                                        <p class="preparacion-receta-del-dia">{{preparacion}}</p>
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>                            
+                            
+                            
+                            
+                            
+                            <!-- <ul class="ingredientes-receta-del-dia">
+                                <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
+                                    <li v-if="ingrediente !=''">
+                                        {{ ingrediente }}
+                                    </li>
+                                </div>
+                            </ul>
+                            <p class="preparacion-receta-del-dia">{{preparacion}}</p> -->
+                        </div>    
+                    </div>
+                </div>
+            </section>
+            </main>
+        <footer class="footer">
+            <div class="grid-footer">
+                <!-- <div class="footer_columnas"> -->
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Participantes</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Descripción</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Documentación</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>
+                    <Section class="footer_columna">
+                        <h5 class="footer-column-titulo">Sarasa</h5> 
+                        <p class="footer-column-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi voluptatum  error, quas ex, doloribus quibusdam reiciendis nobis animi quos dignissimos ipsa nihil, maiores eveniet ducimus. Rerum ut repudiandae pariatur?</p> 
+                    </section>           
+                <!-- </div> -->
+                <section class="social-icons">
+                    <!-- <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>                     -->
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Lucía</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Fede</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/in/cecilia-paolucci/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Cecilia</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Jazmín</p>
+                    </div>
+                </section>
+                <section id="copyright">
+                    <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
+                </section>            
+       </footer>       
+       <!-- referencias a scripts -->
+       <script type="module" src="./assets/vue/receta.js"></script>
+       <script src="./assets/js/menu.js"></script> 
+       <!-- --------------------- -->
+
+    </body>   
+</html>

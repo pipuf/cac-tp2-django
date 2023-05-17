@@ -8,7 +8,7 @@ body{
     background-color: var(--main-background-color);
 }
 
-.grid{
+/* .grid{
     display: grid;
     grid-template-columns: repeat(var(--main-column-count), 1fr);
     width: 100%;
@@ -18,7 +18,7 @@ body{
     gap: 10px;
     overflow: hidden;
     align-items: center;
-}
+} */
 
 main{ 
     min-height: 70vh;
@@ -100,6 +100,32 @@ main{
     border-top: 1px solid var(--gris-oscuro);
     border-bottom: 1px solid var(--gris-oscuro);
     padding: 10px;
+}
+.receta-del-dia{
+    background-color: var(--secondary-background-color);
+}
+
+.receta-del-dia h3{
+    grid-column: 1/-1;
+    margin:auto
+}
+
+.nombre-receta-del-dia{
+    grid-column: 1/6;
+}
+
+.img-receta-del-dia{
+    grid-column: 1/6;
+    height:200px
+}
+
+.ingrediente-receta-del-dia{
+    grid-column: 7/12;
+    font-size: var(--small-font-size);
+    margin-left:50px
+}
+.preparacion-receta-del-dia{
+    font-size: var(--small-font-size);
 }
 
 /* Puntos de corte sitio responsive */

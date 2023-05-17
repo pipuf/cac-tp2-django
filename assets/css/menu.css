@@ -69,53 +69,6 @@ main{
     overflow: scroll;
 }
 
-/* ------------- Animacion flip-over ---------------- */
-
-.animation-flip-content{    
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.animation-flip:hover .animation-flip-content  {
-    transform: rotateY(180deg);
-}
-
-.animation-flip-info{
-    transform: rotateY(180deg);
-}
-/* ------------- Fin animacion flip over --------------------  */
-
-/* ------------- Fin animacion slide ------------------------  */
-.animation-slide-front:hover {
-    animation-duration: 3s; 
-    animation-name: slidein;
-    animation-fill-mode: forwards;
-    border: 1px solid var(--gris-oscuro);
-    border-top: 0;
-}
-
-.animation-slide-info{
-    height: 200px;
-    overflow:hidden;
-}
-
-.animation-slide-front{
-    background-color: var(--main-background-color);
-    border-left: 1px;
-    border-right: 1px;
-}
-/* ------------- Fin animacion slide ------------------------  */
-
-
-@keyframes slidein {
-    from {
-      transform: translateX(0) translateY(0) scaleX(1);
-    }
-    to {
-      transform: translateX(101%) translateY(0) scaleX(1);
-    }
-  }
-
   @media only screen and (min-width: 401px) and (max-width: 670px){
     .grid-menu{
         grid-template-columns: repeat(var(--cards-per-row-tablet), 1fr);

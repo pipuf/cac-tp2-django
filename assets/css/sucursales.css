@@ -95,6 +95,10 @@ main{
         border: 2px solid var(--rojo);
         margin: 2vh 0 1vh 0;
     }
+    
+    #nombre-sucursal, #info-sucursal{
+        text-align: center;
+    }
 }
 
 
@@ -117,9 +121,14 @@ main{
         margin: 0 auto;
         grid-row: 3;
         border-left: 0;
+    
     }
     #separador {
         border: 2px solid var(--rojo);
         margin: 2vh 0 1vh 0;
+    }
+
+    #nombre-sucursal, #info-sucursal{
+        text-align: center;
     }
 }

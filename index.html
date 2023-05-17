@@ -46,6 +46,7 @@
                     <li class="flex-menu-item"><a class="menu-button" href="./menu.html">Menú</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./formRegistro.html">Registrate</a></li>
+                    <li class="flex-menu-item"><a class="menu-button" href="./receta.html">Receta del día</a></li>
                     <!-- <li class="flex-menu-item"><a class="menu-button" href="#">Sobre nosotros</a></li> -->
                 </ul>
             </nav>
@@ -93,6 +94,25 @@
                 </div>
             </div>
         </section>
+        <!-- <section class="receta-del-dia">
+            <div class=" grid-receta-del-dia" id="app">
+                <h3>Receta del día</h3>
+                <div v-if="nombre != null">
+                    <div class="grid">
+                        <h4 class="nombre-receta-del-dia">{{nombre}}</h4>
+                        <img :src=img alt="" class="img-receta-del-dia">
+                        <ul class="ingredientes-receta-del-dia">
+                            <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
+                                <li v-if="ingrediente !=''">
+                                    {{ ingrediente }}
+                                </li>
+                            </div>
+                        </ul>
+                        <p class="preparacion-receta-del-dia">{{preparacion}}</p>
+                    </div>    
+                </div>
+            </div>
+        </section> -->
    </main>
    <footer class="footer">
         <div class="grid-footer">
@@ -143,6 +163,7 @@
                 <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
             </section>            
    </footer> 
-   <script src="./assets/js/menu.js"></script>  
+   <script src="./assets/js/menu.js"></script> 
+   <script type="module" src="./assets/js/callApi.js"></script> 
 </body>
 </html>
