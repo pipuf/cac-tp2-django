@@ -22,7 +22,7 @@ main{
     min-height: 80vh;
     height:fit-content;
     background-color: var(--main-background-color);
-    perspective: 1000px;
+    /* perspective: 1000px; */
     text-align: center;
     margin:auto auto;
 }
