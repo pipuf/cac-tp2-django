@@ -55,14 +55,14 @@
             <section class="receta-del-dia">
                 <div  id="app">
                     <!-- <h3>Receta del día</h3> -->
-                    <div v-if="nombre != null">
-                        <div>
+                    <!-- <div>
+                        <div> -->
                             <!-- <h4 class="nombre-receta-del-dia">{{nombre}}</h4> -->
                             <!-- <img :src=img alt="" class="img-receta-del-dia"> -->
                              <div class="receta animation-flip">
                                 <div class="menu-card-content animation-flip-content">
                                     <div class="menu-card-front grid-receta-del-dia">
-                                        <h4 class="titulo-receta-del-dia">{{nombre}}</h4>
+                                        <h4 class="titulo-receta-del-dia" v-if="nombre != null">{{nombre}}</h4>
                                         <img :src=img alt="" class="img-receta-del-dia">
                                     </div>
                                     <div class="menu-card-info grid-receta-del-dia animation-flip-info">
@@ -70,17 +70,14 @@
                                         <h5 id="ingredientes">Ingredientes</h5>
                                         <ul class="ingredientes-receta-del-dia">
                                             <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
-                                                <li v-if="ingrediente !=''">
-                                                    {{ ingrediente }}
-                                                </li>
+                                                <li v-if="ingrediente !== ''">{{ ingrediente }}</li>
                                             </div>
                                         </ul>
                                         <h5 id="preparacion">Preparación</h5>                                   
                                         <p class="preparacion-receta-del-dia">{{preparacion}}</p>
-                                    </p>
                                     </div>
-                                </div>
-                            </div>                            
+                                <!-- </div>
+                            </div>                             -->
                             
                             
                             

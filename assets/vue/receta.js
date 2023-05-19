@@ -30,7 +30,7 @@
                                 if (data.meals[0]["strIngredient"+i].trim()!="")
                                     this.ingredientes[i-1]=data.meals[0]["strIngredient"+i].trim() +" "+data.meals[0]["strMeasure"+i].trim()
                                 else
-                                    this.ingredientes[i-1]=''
+                                    this.ingredientes[i-1]=""
                         }
                         console.log(this.ingredientes)
                         this.preparacion=data.meals[0].strInstructions

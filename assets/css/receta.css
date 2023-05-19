@@ -9,13 +9,15 @@ body{
 }
 
 main{ 
-    min-height: 70vh;
+    min-height: 150vh;
     height:fit-content;
 }
 
 .receta-del-dia{
    min-height:70vh;
    height:fit-content;
+   border:1px solid blue;
+   /* overflow-y:scroll */
 }
 
 .receta{
@@ -39,6 +41,7 @@ main{
 .grid-receta-del-dia{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: auto; */
     /* overflow: scroll; */
 }
 
@@ -65,14 +68,18 @@ h5{
 
 .ingredientes-receta-del-dia{
     grid-column: 2/5;
+    /* min-height: 50vh ; */
     font-size: var(--small-font-size);
     text-align: left;
     list-style-type: disc;
-    margin:0 50px
+    margin:0 50px;
+    /* overflow-y: scroll; */
 }
 .preparacion-receta-del-dia{
     grid-column: 5/12;
+    /* min-height: 50vh; */
     font-size: var(--small-font-size);
+    /* overflow-y:scroll; */
 }
 
 
