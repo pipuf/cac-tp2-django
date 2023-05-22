@@ -20,7 +20,7 @@
     <link href="./assets/css/header.css" rel="stylesheet">    
     <link href="./assets/css/footer.css" rel="stylesheet">
     <link href="./assets/css/receta.css" rel="stylesheet">
-    <link href="./assets/css/sucursales.css" rel="stylesheet">
+    <!-- <link href="./assets/css/sucursales.css" rel="stylesheet"> -->
     
     <!-- ------------------ -->
 
@@ -52,48 +52,28 @@
             </div>
        </header>
         <main> 
-            <section class="receta-del-dia">
-                <div  id="app">
-                    <!-- <h3>Receta del día</h3> -->
-                    <!-- <div>
-                        <div> -->
-                            <!-- <h4 class="nombre-receta-del-dia">{{nombre}}</h4> -->
-                            <!-- <img :src=img alt="" class="img-receta-del-dia"> -->
-                             <div class="receta animation-flip">
-                                <div class="menu-card-content animation-flip-content">
-                                    <div class="menu-card-front grid-receta-del-dia">
-                                        <h4 class="titulo-receta-del-dia" v-if="nombre != null">{{nombre}}</h4>
-                                        <img :src=img alt="" class="img-receta-del-dia">
+            <section class="receta-del-dia" id="app">
+                <!-- <div> -->
+                    <div class="receta animation-flip">
+                        <div class="menu-card-content animation-flip-content">
+                            <div class="menu-card-front grid-receta-del-dia">
+                                <h4 class="titulo-receta-del-dia" v-if="nombre != null">{{nombre}}</h4>
+                                <img :src=img alt="" class="img-receta-del-dia">
+                            </div>
+                            <div class="menu-card-info grid-receta-del-dia animation-flip-info">
+                                <h4 class="titulo-receta-del-dia">{{nombre}}</h4>
+                                <h5 id="ingredientes">Ingredientes</h5>
+                                <ul class="ingredientes-receta-del-dia">
+                                    <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
+                                        <li v-if="ingrediente !== ''">{{ ingrediente }}</li>
                                     </div>
-                                    <div class="menu-card-info grid-receta-del-dia animation-flip-info">
-                                        <h4 class="titulo-receta-del-dia">{{nombre}}</h4>
-                                        <h5 id="ingredientes">Ingredientes</h5>
-                                        <ul class="ingredientes-receta-del-dia">
-                                            <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
-                                                <li v-if="ingrediente !== ''">{{ ingrediente }}</li>
-                                            </div>
-                                        </ul>
-                                        <h5 id="preparacion">Preparación</h5>                                   
-                                        <p class="preparacion-receta-del-dia">{{preparacion}}</p>
-                                    </div>
-                                <!-- </div>
-                            </div>                             -->
-                            
-                            
-                            
-                            
-                            <!-- <ul class="ingredientes-receta-del-dia">
-                                <div class="ingrediente-receta-del-dia" v-for="ingrediente in ingredientes">
-                                    <li v-if="ingrediente !=''">
-                                        {{ ingrediente }}
-                                    </li>
-                                </div>
-                            </ul>
-                            <p class="preparacion-receta-del-dia">{{preparacion}}</p> -->
+                                </ul>
+                                <h5 id="preparacion">Preparación</h5>                                   
+                                <p class="preparacion-receta-del-dia">{{preparacion}}</p>
+                            </div>
                         </div>    
                     </div>
-                </div>
-            </section>
+                </section>
             </main>
         <footer class="footer">
             <div class="grid-footer">

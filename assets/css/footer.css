@@ -13,7 +13,7 @@
     margin: auto;
     gap: 10px;
     overflow: hidden;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .footer_columnas{
@@ -44,22 +44,26 @@
     text-align: justify;
 }
 
-.social-icons{
-        grid-column: 1/-1;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+.integrantes{
+    font-size: var(--tiny-font-size);
+    list-style-type: none;
+    padding: 10px 20px;
+    text-align: center;
 }
 
+.social-icons{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-/* [class^="fa-brands"]{ */
 .cv{
     font-size: 20px;
     margin:auto;
     text-align: center;
     width: 22%;
     padding: 10px;
-
 }
 
 .nombre-cv{

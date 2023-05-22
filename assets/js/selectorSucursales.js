@@ -40,7 +40,7 @@ document.getElementById('sucursal2').addEventListener('click',()=>{elegirSucursa
 document.getElementById('sucursal3').addEventListener('click',()=>{elegirSucursal("sucursal3")})
 document.getElementById('sucursal4').addEventListener('click',()=>{elegirSucursal("sucursal4")})
 
-document.getElementById('sucursal1').addEventListener('touchend',()=>{elegirSucursal("sucursal1")})
-document.getElementById('sucursal2').addEventListener('touchend',()=>{elegirSucursal("sucursal2")})
-document.getElementById('sucursal3').addEventListener('touchend',()=>{elegirSucursal("sucursal3")})
-document.getElementById('sucursal4').addEventListener('touchend',()=>{elegirSucursal("sucursal4")})
+document.getElementById('sucursal1').addEventListener('touchstart',()=>{elegirSucursal("sucursal1")})
+document.getElementById('sucursal2').addEventListener('touchstart',()=>{elegirSucursal("sucursal2")})
+document.getElementById('sucursal3').addEventListener('touchstart',()=>{elegirSucursal("sucursal3")})
+document.getElementById('sucursal4').addEventListener('touchstart',()=>{elegirSucursal("sucursal4")})

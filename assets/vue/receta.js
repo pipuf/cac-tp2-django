@@ -1,10 +1,10 @@
 
         import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
-        const URL_API = "https://www.themealdb.com/api/json/v1/1/random.php";
+        const URL_API = "https://www.themealdb.com/api/json/v1/1/"
 
         /*CREACION DEL CORE*/
 
-        const CoreObject = {
+        const recetaRandom = {
             data: function () {
                 return {
                     /*variables de inicializacion*/
@@ -15,15 +15,14 @@
                 };
             },
             mounted: function() {
-                this.handlerRecetas() // Calls the method before page loads
+                this.handlerRecetaRandom() 
             },
             methods: {
-                handlerRecetas: async function () {
+                handlerRecetaRandom: async function () {
                     try {
-                        let response = await fetch(URL_API);
+                        let response = await fetch(URL_API+"random.php");
                         let data = await response.json();
                         this.nombre = data.meals[0].strMeal;
-                        console.log(this.nombre)
                         this.img = data.meals[0].strMealThumb;
                         for (var i=1; i<21; i++){ 
                             if (data.meals[0]["strIngredient"+i] != null)
@@ -42,10 +41,8 @@
             },
         };
 
-        /*ASIGNACION DEL CORE A METODO DE VUE*/
-
-        const app = createApp(CoreObject);
+           /*ASIGNACION DEL CORE A METODO DE VUE*/
+        const app = createApp(recetaRandom);
 
         /*MONTADO DEL PROYECTO*/
-
         app.mount("#app");
