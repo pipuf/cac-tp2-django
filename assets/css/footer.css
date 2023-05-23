@@ -51,6 +51,15 @@
     text-align: center;
 }
 
+.documentacion{
+    display:flex;
+    justify-content: center;
+}
+
+.qr{
+    height:150px;
+}
+
 .social-icons{
     grid-column: 1/-1;
     display: flex;

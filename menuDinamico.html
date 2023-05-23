@@ -20,7 +20,6 @@
     <link href="./assets/css/footer.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
     <link href="./assets/css/menu.css" rel="stylesheet">
- 
     <!-- ------------------ -->
 
 
@@ -42,7 +41,7 @@
             <nav class="menu">
                  <ul class="flex-menu-wrapper">
                     <li class="flex-menu-item"><a class="menu-button" href="./index.html">Inicio</a></li>
-                    <li class="flex-menu-item"><a class="menu-button-first" href="./menu.html">Menú</a></li>
+                    <li class="flex-menu-item"><a class="menu-button-first" href="./menuDinamico.html">Menú</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./sucursales.html">Sucursales</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./formRegistro.html">Registrate</a></li>
                     <li class="flex-menu-item"><a class="menu-button" href="./receta.html">Receta del día</a></li>
@@ -59,9 +58,22 @@
                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
             </section>
             <section id="appMenu" class="grid-menu">
-                <!-- <div v-for="n in 12"> </div> -->
-                <div >hol</div>
-           </section>
+                <!-- <div v-html="receta"></div> -->
+                <div
+                    v-for="(meal,index) in mealList" 
+                    class="menu-card animation-flip">
+                    <div class="menu-card-content animation-flip-content">
+                        <div class="menu-card-front">
+                            <h5 class="titulo-menu-card">{{meal.strMeal}}</h5>
+                            <img :src="meal.strMealThumb" alt="" class="img-menu-card">
+                        </div>
+                        <div class="menu-card-info animation-flip-info">
+                            <h5 class="titulo-menu-card">{{meal.strMeal}}</h5>
+                            <p class="menu-card-info-text">{{mealDetails[index]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
       </section>         
 </main>
@@ -114,7 +126,7 @@
             <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
         </section>            
 </footer> 
-   <script type="module" src="./assets/vue/recetaMenu.js"></script> 
+   <script type="module" src="./assets/vue/recetasMenu.js"></script> 
    <script src="./assets/js/menu.js"></script> 
 </body>
 </html>
