@@ -34,8 +34,6 @@ main{
     max-height: 55vh;
     margin: auto;
     grid-column: 4/10;
-    grid-column-start: 3;
-    grid-column-end: 11; 
     width: 100%;
 }
 
