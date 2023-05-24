@@ -60,7 +60,13 @@
 
             <label for="categories"></label>
             <select name="categories" id="cars" > 
-                <option  v-for="categorie in categories" :value="categorie.strCategory" @click="handlerRecetasMenu(categorie.strCategory)">{{categorie.strCategory}}</option>
+                <option  
+                    v-for="categorie in categories" 
+                    :value="categorie.strCategory"
+                    @click="handlerRecetasMenu(categorie.strCategory)">
+                    
+                    {{categorie.strCategory}}
+                </option>
             </select>
 
             <section class="grid-menu">

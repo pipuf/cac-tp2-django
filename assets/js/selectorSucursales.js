@@ -35,12 +35,10 @@ function elegirSucursal (nombreBoton){
       document.getElementById("info-sucursal").innerText=sucursal.direccion
 }
 
-document.getElementById('sucursal1').addEventListener('click',()=>{elegirSucursal("sucursal1")})
-document.getElementById('sucursal2').addEventListener('click',()=>{elegirSucursal("sucursal2")})
-document.getElementById('sucursal3').addEventListener('click',()=>{elegirSucursal("sucursal3")})
-document.getElementById('sucursal4').addEventListener('click',()=>{elegirSucursal("sucursal4")})
-
-document.getElementById('sucursal1').addEventListener('touchstart',()=>{elegirSucursal("sucursal1")})
-document.getElementById('sucursal2').addEventListener('touchstart',()=>{elegirSucursal("sucursal2")})
-document.getElementById('sucursal3').addEventListener('touchstart',()=>{elegirSucursal("sucursal3")})
-document.getElementById('sucursal4').addEventListener('touchstart',()=>{elegirSucursal("sucursal4")})
+for (var i=1; i<=4; i++){
+    let sucursalID=`sucursal${i}`
+    // agrega listeners para evitar errores en dispositivos mobile/touchscreen 
+    document.getElementById(sucursalID).addEventListener('click',()=>{elegirSucursal(sucursalID)}) 
+    document.getElementById(sucursalID).addEventListener('touchstart',()=>{elegirSucursal(sucursalID)}) 
+    document.getElementById(sucursalID).addEventListener('touchmove',()=>{elegirSucursal(sucursalID)}) 
+}
