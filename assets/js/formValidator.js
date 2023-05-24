@@ -108,11 +108,7 @@ function validarApellido(campoForm){
  }
 
  function enviarCorreo(eMail){
-    let textoEmail=""
-//     textoEmail = "mailto:" + eMail
-//                + "?subject=" + "Tu cupón de descuento"
-//                + "&body=" + insTextoComp;
-//    window.location.href = sLink;
+
  }
 
  function validarForm(e,miDoc){
@@ -134,9 +130,8 @@ function validarApellido(campoForm){
         clearForm(miForm)
         if (document.getElementById('gridCheck').value) {
             enviarCorreo(eMail.value)
-            alert("mandar correo")
         }
-        alert ("Tus datos ya fueron enviados")
+        alert ("Por ahora, esto no hace nada con tus datos")
     }
 }
 

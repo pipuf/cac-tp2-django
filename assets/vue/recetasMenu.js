@@ -9,41 +9,51 @@
                 return {
                     /*variables de inicializacion*/
                     mealList: null,
-                    mealDetails: []
+                    mealDetails: [],
+                    categories: null
                 };
             },
-            mounted: function() {
-                this.handlerRecetasMenu() 
+            created: function() {
+                this.getCategories()
+                this.handlerRecetasMenu("Seafood") 
             },
             methods: {
+                getCategories: async function (mealID) {
+                    try {
+                        // Trae todas las recetas de la categoría Seafood
+                        let response = await fetch(URL_API+"list.php?c=list")
+                        let data = await response.json();
+                        this.categories = data.meals;
+
+                    } catch (error) {
+                        console.log({ error });
+                    }
+                }, 
+
                 getMealDetails: async function (mealID) {
                     try {
                         // Trae todas las recetas de la categoría Seafood
                         let response = await fetch(URL_API+"lookup.php?i="+mealID)
                         let data = await response.json();
                         let mealDetalles = data.meals;
-                        let mealsLength = this.mealDetails.push(mealDetalles.strInstructions)                          
-                        return mealsLength
+                        let mealsLength = this.mealDetails.push(mealDetalles[0].strInstructions)                          
                     } catch (error) {
                         console.log({ error });
                     }
                 }, 
                                
-                handlerRecetasMenu: async function () {
+                handlerRecetasMenu: async function (categoria) {
                     try {
                         // Trae todas las recetas de la categoría Seafood
-                        let response = await fetch(URL_API+"filter.php?c=Seafood");
+                        let response = await fetch(URL_API+"filter.php?c="+categoria);
                         let data = await response.json();
                         this.mealList = data.meals;
 
-                        let mealsLength = 0
+                        // let mealsLength = 0
                         console.log(this.mealList)
                         this.mealList.forEach(meal => {
-                            let mealsLength=this.getMealDetails(meal.idMeal)  
-                            console.log(mealsLength)                       
+                            this.getMealDetails(meal.idMeal)                       
                         });
-                        console.log(mealsLength)
-                        console.log(this.mealDetails)
 
                     } catch (error) {
                         console.log({ error });

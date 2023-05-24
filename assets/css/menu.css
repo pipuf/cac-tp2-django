@@ -65,8 +65,9 @@ main{
 .menu-card-info-text{
     width:100%;
     height: 83%;
-    padding: 0 5px 3px 5px;
+    padding: 0 10px 3px 10px;
     overflow: scroll;
+    font-size: var(--tiny-font-size);
 }
 
   @media only screen and (min-width: 401px) and (max-width: 670px){
