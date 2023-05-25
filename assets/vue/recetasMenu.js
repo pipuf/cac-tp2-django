@@ -51,9 +51,7 @@
                         for (var i=1; i<21; i++){ 
                             if (mealDetalles[0]["strIngredient"+i] != null)
                                 if (mealDetalles[0]["strIngredient"+i].trim()!="")
-                                    // this.ingredientes[i-1]=mealDetalles[0]["strIngredient"+i].trim() +" "+mealDetalles[0]["strMeasure"+i].trim()
                                     mealsLength = listaIngredientes.push(mealDetalles[0]["strIngredient"+i].trim() +" "+mealDetalles[0]["strMeasure"+i].trim())
-                                    console.log()
                         }
 
                         mealsLength = this.ingredientes.push(listaIngredientes)
