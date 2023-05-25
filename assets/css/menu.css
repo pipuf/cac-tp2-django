@@ -49,9 +49,12 @@ main{
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    overflow-y: scroll;
+    -moz-backface-visibility: hidden;    
 } 
+
+.menu-card-info{
+    overflow-y: scroll;
+}
 
 .titulo-menu-card{
     margin-bottom: 10px;
