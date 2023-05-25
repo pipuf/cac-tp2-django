@@ -54,6 +54,7 @@ main{
 
 .menu-card-info{
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .titulo-menu-card{
