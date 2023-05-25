@@ -20,7 +20,7 @@
             methods: {
                 getCategories: async function (mealID) {
                     try {
-                        // Trae todas las recetas de la categoría Seafood
+                        // Trae una lista de categorias dispobibles
                         let response = await fetch(URL_API+"list.php?c=list")
                         let data = await response.json();
                         this.categories = data.meals;
@@ -33,7 +33,7 @@
 
                 getMealDetails: async function (mealID) {
                     try {
-                        // Trae todas las recetas de la categoría Seafood
+                        // Trae el detalle de una receta por ID
                         let response = await fetch(URL_API+"lookup.php?i="+mealID)
                         let data = await response.json();
                         let mealDetalles = data.meals;
@@ -45,10 +45,7 @@
                                
                 handlerRecetasMenu: async function (categoria) {
                     try {
-
-                        console.log("estoy aca")
-                        console.log(categoria)
-                        // Trae todas las recetas de la categoría Seafood
+                        // Trae todas las recetas de la categoría que se recibe por parametro
                         let response = await fetch(URL_API+"filter.php?c="+categoria);
                         let data = await response.json();
                         this.mealList = data.meals;

@@ -85,15 +85,22 @@ function validarApellido(campoForm){
 
  function validarPassword(password1,password2) {
     return validar(esRequerido,password1,"Tenés que ingresar la contraseña","inline","error-inputPassword1") &&
-           validar(formatoPassword,password1,"El formato de la contraseña no es válido","inline","error-inputPassword1") &&
+           validar(formatoPassword,password1,`El formato de la contraseña no es válido 
+                Mínimo 8 caracteres
+                Máximo 15
+                Al menos una letra mayúscula
+                Al menos una letra minúscula
+                Al menos un dígito
+                No espacios en blanco
+                Al menos 1 carácter especial`,"inline","error-inputPassword1") &&
            validar(esRequerido,password2,"Tenés que confirmar la contraseña","inline","error-inputPassword2")  &&
-           validar(formatoPassword,password2,"El formato de la contraseña no es válido","inline","error-inputPassword2") &&
+        //    validar(formatoPassword,password2,"El formato de la contraseña no es válido","inline","error-inputPassword2") &&
            validar(passwordMatch,password1,"Las contraseñas no coinciden","inline","error-inputPassword1",password2)   
         
  }
-
+/*  */
  function validarTelefono(campoForm){
-    return validar(formatoTelefono,campoForm,"Esto no es un teléfono","inline","error-inputTelefono")   
+    return validar(formatoTelefono,campoForm,"El teléfono tiene que tener la forma 123-123-1234","inline","error-inputTelefono")   
  }
 
  function clearForm(miDoc){
