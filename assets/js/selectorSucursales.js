@@ -40,5 +40,5 @@ for (var i=1; i<=4; i++){
     // agrega listeners para evitar errores en dispositivos mobile/touchscreen 
     document.getElementById(sucursalID).addEventListener('click',()=>{elegirSucursal(sucursalID)}) 
     document.getElementById(sucursalID).addEventListener('touchstart',()=>{elegirSucursal(sucursalID)}) 
-    document.getElementById(sucursalID).addEventListener('touchmove',(e)=>{e.preventDefault()}) 
+    // document.getElementById(sucursalID).addEventListener('touchmove',(e)=>{e.preventDefault()}) 
 }
