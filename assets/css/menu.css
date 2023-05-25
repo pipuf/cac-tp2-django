@@ -27,7 +27,7 @@ main{
 .menu-card{
     border: 1px solid; 
     height: 200px;
-    overflow:hidden;
+    /* overflow:hidden; */
     background-color: var(--main-background-color);
     perspective: 1000px;
 }
