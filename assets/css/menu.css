@@ -53,7 +53,7 @@ main{
 } 
 
 .menu-card-info{
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .titulo-menu-card{

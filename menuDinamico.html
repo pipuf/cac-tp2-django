@@ -83,10 +83,8 @@
                         <div class="menu-card-info animation-flip-info">
                             <h5 class="titulo-menu-card">{{meal.strMeal}}</h5>
                             <h6 id="ingredientes">Ingredientes</h6>
-                            <ul class="ingredientes-receta" v-for="ingrediente in ingredientes[index]">
-                                <!-- <div class="ingrediente-receta" v-for="ingrediente in ingredientes[index]"> -->
-                                    <li v-if="ingrediente !== ''">{{ingrediente}}</li>
-                                <!-- </div> -->
+                            <ul class="ingredientes-receta">
+                                <li  v-for="ingrediente in ingredientes[index]" v-if="ingrediente !== ''">{{ingrediente}}</li>
                             </ul>
                             <h6 id="preparacion">Preparación</h6>                                   
                             <p class="menu-card-info-text">{{preparacion[index]}}</p>
