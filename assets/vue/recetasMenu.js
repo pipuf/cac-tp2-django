@@ -8,14 +8,14 @@
             data: function () {
                 return {
                     /*variables de inicializacion*/
+                    categories: null,
                     mealList: null,
                     mealDetails: [],
-                    categories: null
                 };
             },
             created: function() {
                 this.getCategories()
-                this.handlerRecetasMenu("Seafood") 
+                this.handlerRecetasMenu("beef") 
             },
             methods: {
                 getCategories: async function (mealID) {
@@ -29,6 +29,7 @@
                         console.log({ error });
                     }
                 }, 
+
 
                 getMealDetails: async function (mealID) {
                     try {
@@ -44,6 +45,9 @@
                                
                 handlerRecetasMenu: async function (categoria) {
                     try {
+
+                        console.log("estoy aca")
+                        console.log(categoria)
                         // Trae todas las recetas de la categoría Seafood
                         let response = await fetch(URL_API+"filter.php?c="+categoria);
                         let data = await response.json();
@@ -67,7 +71,7 @@
         };
 
         
-
+     
         /*ASIGNACION DEL CORE A METODO DE VUE*/
         const app = createApp(recetasMenu);
 
