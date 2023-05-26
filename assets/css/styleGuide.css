@@ -124,11 +124,11 @@ h2{
 }
 
 .animation-flip:hover .animation-flip-content  {
-   transform: rotateY(180deg);
+   /* transform: rotateY(180deg); */
 }
 
 .animation-flip-info{
-   transform: rotateY(180deg);
+   /* transform: rotateY(180deg); */
 }
 /* ------------- Fin animacion flip over --------------------  */
 
