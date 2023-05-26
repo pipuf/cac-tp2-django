@@ -59,11 +59,11 @@ main{
 
 .titulo-menu-card{
     margin: 5px 0;
-    width: 80%;
+    /* width: 80%; */
 }
 
 .img-menu-card{
-    object-fit: cover;
+    /* object-fit: cover; */
     /* width: 97.5%;
     height: 95%; */
     width: 100%;
@@ -82,7 +82,7 @@ main{
 h6{
     font-weight: bold;
     margin: 10px;
-    width:80%;
+    /* width:80%; */
 }
 
 .ingredientes-receta{
@@ -90,7 +90,7 @@ h6{
     text-align: left;
     list-style-type: disc;
     margin:0 20px;
-    width:80%
+    /* width:80% */
 }
 
 /* estilo del selector de categorias *//* The container must be positioned relative: */
