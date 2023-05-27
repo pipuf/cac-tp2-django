@@ -12,7 +12,7 @@ main{
     min-height: 70vh;
 }
 .carrousel {
-    height: 40vh;
+    height: 20rem;
     margin: 5px;
     border: 1px solid;
     background-image: url("../img/promo1.png");

@@ -81,7 +81,7 @@ strong{
     overflow: hidden;
     width: 100%;
     max-width: 200px;
-    top: -15px;
+    top: -25px;
     height: auto;
     border: 1px dotted var(--gris-oscuro);
     border-radius: 10px;
@@ -200,7 +200,7 @@ strong{
     .tool-tip .tooltip-text {
         width: 100%;
         max-width: 130px;
-        top: -100px;
+        top: -50px;
         right: 0
     }
 

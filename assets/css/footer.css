@@ -91,7 +91,7 @@
 
 
 
-@media only screen and (min-width: 401px) and (max-width: 670px){
+@media only screen and (min-width: 401px) and (max-width: 800px){
     .grid-footer{
         grid-template-columns: repeat(var(--footer-column-count-tablet), 1fr);
     }   
