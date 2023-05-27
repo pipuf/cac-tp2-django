@@ -154,11 +154,13 @@ strong{
     margin: 20px;
     font-size: var(--tiny-font-size);
 }
+
 .datos-alert > p{
     margin: 0;
 }
 
 #titulo-alert{
+    font-weight: bold;
     margin: 10px 0;
 }
 

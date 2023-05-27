@@ -139,6 +139,8 @@ function validarApellido(campoForm){
     mostrarPopup("Datos ingresados en el form",`Este formulario no produce ninguna acción en el evento submit. 
     Este pop-up se muestra solo como una demostración de que el botón Submit ha sido accionado, la información correspondiente capturada y el evento capturado en un listener.`,
     datos)
+    // Mas adelante, el resultado corresponderá al éxito en la persistencia de los datos
+    return true
  }
 
  function validarForm(e,miDoc){
@@ -169,8 +171,9 @@ function validarApellido(campoForm){
 
         if (recibirOfertas.checked) 
             enviarCorreo(datos)
-        guardarDatos(datos) 
-        clearForm(miForm)
+
+        if (guardarDatos(datos))
+            clearForm(miForm)
     }
 }
 
