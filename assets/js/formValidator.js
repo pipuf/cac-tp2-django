@@ -148,11 +148,11 @@ function validarApellido(campoForm){
 
     clearErrors(miDoc)
 
-    // esValido = validarNombre(nombre) && esValido
-    // esValido = validarApellido(apellido) && esValido
-    // esValido = validarEmail(email)  && esValido
-    // esValido = validarPassword(password1,password2) && esValido
-    // esValido = validarTelefono(telefono) && esValido 
+    esValido = validarNombre(nombre) && esValido
+    esValido = validarApellido(apellido) && esValido
+    esValido = validarEmail(email)  && esValido
+    esValido = validarPassword(password1,password2) && esValido
+    esValido = validarTelefono(telefono) && esValido 
 
     if (esValido){
         clearErrors(miDoc)
