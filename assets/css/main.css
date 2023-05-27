@@ -22,7 +22,6 @@ main{
 }
 
 .services{
-    /* height:; */
     background: linear-gradient(180deg, var(--main-background-color) 50%,var(--secondary-background-color) 50%);
 }
 
@@ -53,8 +52,7 @@ main{
 }
 
 .titulo-service {
-    margin: 20px 0;
-    
+    margin: 20px 0;   
 }
 
 .nosotros{
@@ -88,6 +86,7 @@ main{
     border-bottom: 1px solid var(--gris-oscuro);
     padding: 10px;
 }
+
 .receta-del-dia{
     background-color: var(--secondary-background-color);
 }

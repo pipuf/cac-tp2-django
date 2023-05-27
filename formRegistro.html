@@ -60,6 +60,17 @@
         </div>
    </header>
    <main> 
+    <dialog id="user-alert">
+        <section class="texto-alert">
+            <h4 id="titulo-alert"></h4>
+            <p id="info-alert"></p>
+        </section>
+        <section class="datos-alert" id="datos-alert">
+        </section>
+        <div id="boton-container-alert">
+            <button type="cancel" id="boton-alert">OK</button> 
+        </div>
+    </dialog>
     <section class="form-registro">
         <div class="grid">
             <div class="texto-registro">
@@ -69,7 +80,6 @@
                 <!-- el metodo novalidate desactiva la validacion automatica del form
                 usando la API de validacion de restricciones  -->
                 <form id="form-registro" action="" novalidate> 
-                    <!-- <div class="grid"> -->
                     <div class="form-row grid-form">
                         <div class="form-group  form-columna1">
                             <!-- Nombre -->
@@ -120,9 +130,6 @@
                                     <input class="form-check-input" type="checkbox" id="gridCheck4">
                                     <label class="form-check-label" for="gridCheck4">Keto</label>
                                 </div>
-                                <!-- <button id="botonSubmit" type="submit" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Registrate</button>
-                                <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
-
                             </div>
                         </div>
                         <!-- Suscripción -->
@@ -138,7 +145,6 @@
                         <!-- <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
 
                     </div>
-                    <!-- </div> -->
                 </form>
             </div>
         </div>
@@ -201,7 +207,7 @@
     </section>            
 </footer> 
         <!-- referencias a scripts -->
-        <script defer src="./assets/js/formValidator.js"></script>
+        <script type="module" src="./assets/js/formValidator.js"></script>
         <script src="./assets/js/navegador.js"></script> 
         <!-- --------------------- -->   
 </body>

@@ -36,9 +36,8 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
-    /* backface-visibility: hidden; */
-    /* compatibilidad con firefox */
-    /* -webkit-backface-visibility: hidden; */
+    /* compatibilidad con firefox - solo se agrega este estilo a pesar del error que aparece en la terminal
+    porque  backface-compatibility a este nivel rompe el scrolling en mobile*/
     -moz-backface-visibility: hidden;
 }
 
@@ -87,11 +86,10 @@ h6{
     padding: 0px 20px;
 }
 
-/* estilo del selector de categorias *//* The container must be positioned relative: */
+/* estilo del selector de categorias */
 
 #categories-menu {
    font-size: var(--small-font-size);
-   /* height: 50px; */
    width: fit-content;
    background-color: var(--rojo);
    color: var(--gris-claro);
@@ -105,9 +103,6 @@ h6{
     color: var(--gris-claro);
   }
 /* --------------------------------- */
-
-
-
 
   @media only screen and (min-width: 401px) and (max-width: 670px){
     .grid-menu{

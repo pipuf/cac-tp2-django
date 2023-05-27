@@ -1,3 +1,21 @@
+// Formulario de registro
+const miForm = document.getElementById("form-registro");
+// Controles del formulario
+const nombre = document.getElementById('inputNombre')
+const apellido = document.getElementById('inputApellido')
+const telefono=document.getElementById('inputTelefono')
+const email=document.getElementById('inputEmail')
+const password1=document.getElementById('inputPassword1')
+const password2=document.getElementById('inputPassword2')
+const sinTACC=document.getElementById('gridCheck1')
+const vegetariano=document.getElementById('gridCheck2')
+const vegano=document.getElementById('gridCheck3')
+const keto=document.getElementById('gridCheck4')
+const recibirOfertas=document.getElementById('gridCheck')
+// Controles del popup
+const popup=document.getElementById('user-alert')
+const botonPopup = document.getElementById ("boton-alert")
+
 function esRequerido (campoForm){
     return !(campoForm.value.length===0)
 }
@@ -48,9 +66,6 @@ function clearErrors(miDoc){
 
 function validar(callback,campoForm,textoError,tipoMensaje,inlineErrorID,campoForm2){
     const esValido = callback(campoForm,campoForm2); 
-    // console.log(callback)
-    // console.log(campoForm.id+" "+esValido);
-    // console.log (inlineErrorID+" "+textoError)
 
     if (!esValido){
         switch (tipoMensaje){
@@ -114,36 +129,60 @@ function validarApellido(campoForm){
  
  }
 
- function enviarCorreo(eMail){
+ function enviarCorreo(datos){
+    mostrarPopup("Recibir ofertas",`Este formulario no envía email aún. 
+    Este pop-up se muestra solo como una demostración de que el botón Submit ha sido accionado y la información correspondiente capturada y el evento capturado en un listener.`,
+    datos)
+ }
 
+ function guardarDatos(datos){
+    mostrarPopup("Datos ingresados en el form",`Este formulario no produce ninguna acción en el evento submit. 
+    Este pop-up se muestra solo como una demostración de que el botón Submit ha sido accionado, la información correspondiente capturada y el evento capturado en un listener.`,
+    datos)
  }
 
  function validarForm(e,miDoc){
     let esValido=true;
-    let eMail=document.getElementById('inputEmail')
-
+    
     e.preventDefault();
 
     clearErrors(miDoc)
 
-    esValido = validarNombre(document.getElementById('inputNombre')) && esValido
-    esValido = validarApellido(document.getElementById('inputApellido')) && esValido
-    esValido = validarEmail(eMail)  && esValido
-    esValido = validarPassword(document.getElementById('inputPassword1'),document.getElementById('inputPassword2')) && esValido
-    esValido = validarTelefono(document.getElementById('inputTelefono')) && esValido
+    // esValido = validarNombre(nombre) && esValido
+    // esValido = validarApellido(apellido) && esValido
+    // esValido = validarEmail(email)  && esValido
+    // esValido = validarPassword(password1,password2) && esValido
+    // esValido = validarTelefono(telefono) && esValido 
 
     if (esValido){
         clearErrors(miDoc)
+        let datos =    `<p><b>Nombre:</b> ${nombre.value} </p>
+                        <p><b>Apellido:</b> ${apellido.value}</p> 
+                        <p><b>Teléfono:</b> ${telefono.value}</p>
+                        <p><b>Email:</b> ${email.value}</p>
+                        <p><b>Contraseña:</b> ${password1.value}</p>
+                        <p><b>Sin TACC:</b> ${sinTACC.checked==false?'no' : 'sí'}</p>
+                        <p><b>Vegetariana:</b> ${vegetariano.checked==false?'no' : 'sí'}</p>
+                        <p><b>Vegana:</b> ${vegano.checked==false?'no' : 'sí'}</p>
+                        <p><b>Keto:</b> ${keto.checked==false?'no' : 'sí'}</p>
+                        <p><b>Recibir ofertas:</b> ${recibirOfertas.checked==false?'no' : 'sí'}</p>`
+
+        if (recibirOfertas.checked) 
+            enviarCorreo(datos)
+        guardarDatos(datos) 
         clearForm(miForm)
-        if (document.getElementById('gridCheck').value) {
-            enviarCorreo(eMail.value)
-        }
-        alert ("Por ahora, esto no hace nada con tus datos")
     }
 }
 
-
-
-const miForm = document.getElementById("form-registro");
+function mostrarPopup (titulo,info,datos)  {
+    if (!popup.open) {
+        document.getElementById("titulo-alert").innerText=titulo
+        document.getElementById("info-alert").innerText=info
+        document.getElementById("datos-alert").innerHTML=datos
+        popup.showModal()
+    }
+}
 
 miForm.addEventListener('submit', (e) => validarForm(e,miForm));
+
+botonPopup.addEventListener('click', (e) => {e.preventDefault;popup.close()});

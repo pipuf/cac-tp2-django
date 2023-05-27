@@ -55,6 +55,7 @@ main{
     font-size: var(--small-font-size);
     color: var(--rojo);
     display: none;
+    text-align: left;
 }
 
 
@@ -137,8 +138,43 @@ strong{
 }
 
 .form-control.invalid ~ .mensaje-error{
-    display: block ;
+    display: block;
 }
+
+#user-alert{
+    background-color: var(--main-background-color);
+    width: 50%;
+    height: fit-content;
+    margin:20px auto;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.texto-alert, .datos-alert{
+    margin: 20px;
+    font-size: var(--tiny-font-size);
+}
+.datos-alert > p{
+    margin: 0;
+}
+
+#titulo-alert{
+    margin: 10px 0;
+}
+
+#boton-container-alert{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+#boton-alert{
+    background-color: var(--rojo);
+    padding:10px 20px;
+    color: var(--gris-claro);
+    border-radius: 5px;
+}
+
 
 @media only screen and (min-width: 401px) and (max-width: 670px){
     
@@ -164,5 +200,9 @@ strong{
         max-width: 130px;
         top: -100px;
         right: 0
+    }
+
+    #user-alert{
+        width: 80%;
     }
 }
