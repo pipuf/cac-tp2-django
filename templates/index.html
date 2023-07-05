@@ -1,11 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <H1>hello world!</H1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block active%}
+<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'index' %}">Inicio</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'sucursales' %}">Sucursales</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'register' %}">Registrate</a></li>
+{% endblock %}
+
+{% block content %}
+    <main> 
+        <section class="carrousel">
+            <div class="grid">
+                <!-- <img src="./assets/img/promo1.png" alt="" class="img-carousel" id="img-carrousel1"> -->
+                <!-- <img src="./assets/img/logo.png" alt="" class="img-carousel" id="img-carrousel2"> -->
+            </div>
+        </section>
+        <section class="services">
+            <div  class="grid grid-services">
+                <div class="service-items">
+                    <section class="service-item">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <h4 class="titulo-service">20% OFF de regalo</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>
+                    <section class="service-item">
+                        <i class="fa-solid fa-recycle"></i>
+                        <h4 class="titulo-service">Reciclamos</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>
+                    <section class="service-item">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                        <h4 class="titulo-service">La mejor calidad</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis modi blanditiis odit explicabo neque.</p>
+                    </section>  
+                </div>
+            </div>
+        </section>
+        <section class="nosotros">
+            <div class="grid">
+                <div class="texto-nosotros">
+                    <h3>Sobre nuestra cocina</h3>
+                    <p class="parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis quod quidem odit earum autem, quo cum fuga ab nihil. Aliquid, voluptatibus quo! Eius similique dicta, labore laborum a rem! Dolores porro sunt nihil, adipisci ullam voluptatibus fuga consequatur sapiente vero accusamus ad unde neque placeat molestiae soluta mollitia perferendis aliquam! Nulla, aut! Aspernatur laboriosam vero minima aliquam aut exercitationem magni sed labore molestiae ea debitis necessitatibus mollitia, itaque accusamus culpa rem tempora ut dolor ipsam a nostrum est. Sit, voluptatem similique minus inventore laudantium enim aliquid numquam eligendi cumque unde, ex fugit quasi nihil! Reprehenderit nulla dignissimos quasi ipsum magni.</p>
+                    <div class="opciones">
+                        <div class="opcion">Sin TACC</div>
+                        <div class="opcion">Vegetariana</div>
+                        <div class="opcion">Vegana</div>
+                        <div class="opcion">Keto</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

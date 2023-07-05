@@ -1,0 +1,117 @@
+main{ 
+    min-height: 70vh;
+}
+
+.texto-menu{
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.texto-menu p{
+    margin: 10px 0; 
+    padding: 20px;
+}
+
+.grid-menu {
+    grid-column: 1/-1;
+    border: 1px solid; 
+    display: grid;
+    grid-template-columns: repeat(var(--cards-per-row-web),1fr);
+    grid-auto-rows: minmax(200px,200px);
+    gap: 5px;
+    padding: 5px;
+    min-height: 70vh;
+}
+
+.menu-card{
+    border: 1px solid; 
+    height: 200px;
+    overflow:hidden;
+    background-color: var(--main-background-color);
+    perspective: 1000px;
+}
+
+.menu-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* compatibilidad con firefox - solo se agrega este estilo a pesar del error que aparece en la terminal
+    porque  backface-compatibility a este nivel rompe el scrolling en mobile*/
+    -moz-backface-visibility: hidden;
+}
+
+/* Position the front and back side */
+.menu-card-front, .menu-card-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;    
+} 
+
+.menu-card-info{
+    overflow-y: scroll;
+}
+
+.titulo-menu-card{
+    padding: 5px 0;
+}
+
+.img-menu-card{
+    object-fit: cover;
+    width: 100%;
+    height: 87%;
+    margin: auto;
+    padding:3px;
+}
+
+.menu-card-info-text{
+    width:100%;
+    height: 83%;
+    padding: 0 10px 3px 10px;
+    font-size: var(--tiny-font-size);
+}
+
+h6{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ingredientes-receta{
+    font-size: var(--teeny-font-size);
+    text-align: left;
+    list-style-type: disc;
+    padding: 0px 20px;
+}
+
+/* estilo del selector de categorias */
+
+#categories-menu {
+   font-size: var(--small-font-size);
+   width: fit-content;
+   background-color: var(--rojo);
+   color: var(--gris-claro);
+   height: 2.5em;
+   padding: 5px; 
+   grid-column: 1/-1;
+   margin-left: 20px;
+  }
+
+  #categories-menu > option {
+    color: var(--gris-claro);
+  }
+/* --------------------------------- */
+
+  @media only screen and (min-width: 401px) and (max-width: 670px){
+    .grid-menu{
+        grid-template-columns: repeat(var(--cards-per-row-tablet), 1fr);
+
+}
+}
+
+@media only screen and (max-width: 400px) {
+    .grid-menu{
+        grid-template-columns: repeat(var(--cards-per-row-phone), 1fr);
+    } 
+}

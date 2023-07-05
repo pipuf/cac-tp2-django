@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- --------- -->
+    <link href="{% static './assets/css/formRegistro.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block active%}
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'sucursales' %}">Sucursales</a></li>
+<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'register' %}">Registrate</a></li>
+{% endblock %}
+
+{% block content %}
+    <main> 
+        <dialog id="user-alert">
+            <section class="texto-alert">
+                <h4 id="titulo-alert"></h4>
+                <p id="info-alert"></p>
+            </section>
+            <section class="datos-alert" id="datos-alert">
+            </section>
+            <div id="boton-container-alert">
+                <button type="cancel" id="boton-alert">OK</button> 
+            </div>
+        </dialog>
+        <section class="form-registro">
+            <div class="grid">
+                <div class="texto-registro">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
+                </div>
+                <div class="formulario">
+                    <!-- el metodo novalidate desactiva la validacion automatica del form
+                    usando la API de validacion de restricciones  -->
+                    <form id="form-registro" action="" novalidate> 
+                        <div class="form-row grid-form">
+                            <div class="form-group  form-columna1">
+                                <!-- Nombre -->
+                                <div class="form-field">
+                                    <input type="text" class="form-control mb-2 border-dark" id="inputNombre" autocomplete="false" placeholder="Nombre*" required>
+                                    <p class="mensaje-error" id="error-inputNombre">Esto es un error</p>
+                                </div>
+                                <!-- Apellido -->
+                                <div class="form-field">
+                                    <input type="text" class="form-control mb-2 border-dark" id="inputApellido" placeholder="Apellido*" required>
+                                    <p class="mensaje-error" id="error-inputApellido">Esto es un error</p>
+                                </div>
+                                <!-- Telefono -->
+                                <div class="form-field">
+                                    <input type="tel" class="form-control mb-2 border-dark" id="inputTelefono" placeholder="Telefono">
+                                    <p class="mensaje-error" id="error-inputTelefono">Esto es un error</p>
+                                </div>
+                                <!-- Email -->
+                                <div class="form-field">
+                                    <input type="email" class="form-control mb-2 border-dark" id="inputEmail" placeholder="Email*" required>
+                                    <p class="mensaje-error" id="error-inputEmail">Esto es un error</p>
+                                </div>
+                                <!-- Password -->
+                                <div class="form-field">
+                                    <input type="password" class="form-control mb-2 border-dark" id="inputPassword1" placeholder="Contraseña*" required>
+                                    <p class="mensaje-error" id="error-inputPassword1">Esto es un error</p>
+                                </div>
+                                <div class="form-field">    
+                                    <input type="password" class="form-control mb-2 border-dark" id="inputPassword2" placeholder="Confirmá contraseña*" required>
+                                    <p class="mensaje-error" id="error-inputPassword2">Esto es un error</p>
+                                </div>
+                            </div>
+                            <div class="form-group  form-columna2">
+                                <div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">Sin TACC</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                        <label class="form-check-label" for="gridCheck2">Vegetariano</label>    
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck3">
+                                        <label class="form-check-label" for="gridCheck3">Vegano</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck4">
+                                        <label class="form-check-label" for="gridCheck4">Keto</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Suscripción -->
+                            <div class="form-check mt-4 check-suscripcion">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck" >Quiero recibir ofertas</label>
+                                <div class="tool-tip">
+                                    <i class="fa-solid fa-circle-info fa-2xs tooltip-icon"></i>
+                                    <span class="tooltip-text"> Recibí un cupón con <strong>20%</strong> de descuento para tu primera compra</span>
+                                </div>
+                            </div> 
+                            <button id="botonSubmit" type="submit" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Registrate</button>
+                            <!-- <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block script %}
+    <script type="module" src="{% static './assets/js/formValidator.js' %}"></script>
+{% endblock %}

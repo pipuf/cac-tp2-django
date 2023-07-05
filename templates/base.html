@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- ------------ -->
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/fa89224564.js" crossorigin="anonymous"></script>
+    <!-- ------------------ -->
+
+    <!-- Author stylesheets -->
+    <link href="{% static './assets/css/header.css' %}" rel="stylesheet">    
+    <link href="{% static './assets/css/footer.css' %}" rel="stylesheet">
+    <link href="{% static './assets/css/main.css' %}" rel="stylesheet">
+    {% block style %}
+    {% endblock %}
+    <!-- ------------------ -->
+
+    <link rel="icon" href="./assets/icons/logo-removebg-preview.png" type="image/png">
+    <title>Naceluja</title>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="img-logo">
+                <a href="{% url 'index' %}">
+                    <img class="img" id="logo" src="{% static './assets/img/logo-cuadrado-transparente.png' %}" alt="logo">
+                </a>
+            </div>
+            <button class="button-burguer">
+                <img class="burguer" src="{% static './assets/icons/menu.png' %}">
+            </button>
+            <nav class="menu">
+                    <ul class="flex-menu-wrapper">
+                    {% block active %}
+                    {% endblock %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer class="footer">
+        <div class="grid-footer">
+            <Section class="footer_columna">
+                <h5 class="footer-column-titulo">Equipo</h5> 
+                <div class="social-icons">
+                    <div class="cv">
+                        <a href="https://ar.linkedin.com/in/lucia-cartasso" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Lucía Cartasso</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/in/gastón-campo-4a8360198/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Fede Campo</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/in/cecilia-paolucci/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Cecilia Paolucci</p>
+                    </div>
+                    <div class="cv">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <p class="nombre-cv">Jazmín Irurzun</p>
+                    </div>
+                </div>
+                </section>
+            <Section class="footer_columna">
+                <h5 class="footer-column-titulo">Proyecto</h5> 
+                <p class="footer-column-content">El proyecto se basa en el diseño de un sitio web de un restaurant de comida variada.
+                                            Consta de 4 páginas, 1 formulario, 3 API, iFrame y animaciones. La selección de color se basa en 
+                                            la psicología del color que suelen utilizar las empresas de cómida rápida. 
+                </p> 
+            </section>
+            <Section class="footer_columna">
+                <h5 class="footer-column-titulo">Documentación</h5> 
+                <div class="documentacion">
+                        <a href="https://codo-a-codo-g2.atlassian.net/wiki/spaces/TDW/overview" target="_blank">
+                            <img class="qr" id="qr-doc" src="{% static './assets/qr-codes/doc.png' %}" alt="logo">
+                        </a>
+                        <a href="https://github.com/pipuf/cdc-tp1" target="_blank">
+                            <img class="qr" id="qr-doc" src="{% static './assets/qr-codes/repo.png' %}" alt="logo">
+                        </a>
+                </div>
+            </section>
+            <Section class="footer_columna">
+                <h5 class="footer-column-titulo">Dinámica de equipo</h5> 
+                <p class="footer-column-content">El equipo se reunió luego de cada clase desde el envío de la consigna. 
+                                                En principio, se organizó el roadmap en 4 sprints con subdivisión de tareas para 
+                                                la definición de la guía de estilo. 
+                                                La construcción se hizo con el equipo reunido en videollamadas y con la participación 
+                                                grupal en todos los requerimientos de manera que cada miembro gane experiencia en
+                                                todos los conceptos aplicados al proyecto.
+                </p> 
+            </section>           
+        </div>
+        <section id="copyright">
+            <label >Codo a codo - Full stack <sup>©</sup>  Naceluja</label>
+        </section>                    
+    </footer> 
+    <script src="{% static './assets/js/navegador.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>

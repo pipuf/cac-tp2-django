@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static './assets/css/sucursales.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block active%}
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
+<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'sucursales' %}">Sucursales</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'register' %}">Registrate</a></li>
+{% endblock %}
+
+{% block content %}
+    <main> 
+        <section class="sucursales">
+        <div class="grid">
+            <div class="texto-sucursales">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
+            </div>
+            <div class="selector-sucursales">
+                <input type="button" class="boton-sucursales" id="sucursal1" value="Obelisco">
+                <input type="button" class="boton-sucursales" id="sucursal2" value="Nazca">
+                <input type="button" class="boton-sucursales" id="sucursal3" value="Palermo">
+                <input type="button" class="boton-sucursales" id="sucursal4" value="Monte Castro">
+            </div>
+            <div class="mapa-sucursal">
+                <iframe class="frame-mapa" id="mapa-sucursal" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.021712663224!2d-58.383133553714536!3d-34.603612460110654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1680238886168!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="datos-sucursal">
+                <hr id="separador"></hr>
+                <h3 id="nombre-sucursal">Sucursal Obelisco</h3>
+                <p id="info-sucursal">Corrientes y 9 Julio<br>(555) 123-1234</p>
+                </div>
+        </div>
+        </section>         
+    </main>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static './assets/js/selectorSucursales.js' %}"></script>
+{% endblock %}
