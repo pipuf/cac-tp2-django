@@ -40,7 +40,7 @@ BASE_APPS = [
 ]
 THIRD_APPS = []
 
-MY_APPS = []
+MY_APPS = ['sucursales',]
 
 INSTALLED_APPS = BASE_APPS + THIRD_APPS + MY_APPS
 
@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'naceluja.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'naceluja',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 

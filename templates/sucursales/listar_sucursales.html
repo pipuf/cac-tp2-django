@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block active%}
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'sucursales' %}">Sucursales</a></li>
+<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'agregar_sucursal' %}">Agregar Suc</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'register' %}">Registrate</a></li>
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <table>
+                <th>Nombre</th>
+                <th>Domicilio</th>
+                <th>Telefono</th>
+                {% for sucursal in object_list %}
+                <tr>
+                    <td>{{ sucursal.nombre }}</td>
+                    <td>{{ sucursal.domicilio }}</td>
+                    <td>{{ sucursal.telefono }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <a href="{% url 'agregar_sucursal' %}"><button>Agregar</button></a>
+   
+{% endblock %}

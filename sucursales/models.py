@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.urls import reverse 
 
 
 class Sucursal(models.Model):
@@ -9,3 +9,17 @@ class Sucursal(models.Model):
     boton = models.CharField(max_length=20, blank=False, null=False)
     iFrame = models.TextField(blank=False, null=False)
     descripcion = models.TextField(blank=False, null=False)
+
+
+    def __str__(self):
+        return self.nombre
+    class Meta:
+        verbose_name = 'Sucursal'
+        verbose_name_plural = 'Sucursales'
+        ordering = ['nombre']
+        db_table = 'sucursal'
+    
+    def get_absolute_url(self):
+        return reverse('sucursales:sucursal-detail', kwargs={'pk': self.pk})
+    
+

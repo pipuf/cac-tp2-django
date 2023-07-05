@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block active%}
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'sucursales' %}">Sucursales</a></li>
+<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'agregar_sucursal' %}">Agregar Suc</a></li>
+<li class="flex-menu-item"><a class="menu-button" href="{% url 'register' %}">Registrate</a></li>
+{% endblock %}
+
+{% block content %}
+    {% if form %}
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+
+{% endblock %}
