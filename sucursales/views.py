@@ -9,3 +9,6 @@ class CrearSucursal(CreateView):
     model= Sucursal
     fields="__all__"
     success_url = ('/')
+
+    
+
