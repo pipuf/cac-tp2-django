@@ -5,10 +5,12 @@
     {% if form %}
         <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}" ?</p>
             <table>
                 {{ form.as_table }}
             </table>
-            <button type="submit">Submit</button>
+            <button type="cancel">Cancelar</button>
+            <button type="submit">Confirmar</button>
         </form>
     {% endif %}
     </main>

@@ -52,20 +52,20 @@
     margin-right: auto;
 }
 
-.menu-button-first, .menu-button-first:hover {
+.menu-button, .menu-button:hover {
+    text-decoration: none;
+    font-size: var(--nav-button-font-size);
+    color: var(--main-font-color);
+    padding: 5px 10px;
+}
+
+.menu-button-activo, .menu-button-activo:hover {
     text-decoration: none;
     font-size: var(--nav-button-font-size);
     border: 2px solid var(--selection-background-color);
     border-radius: 5px;
     background-color: var(--selection-background-color);
     color: var(--secondary-font-color);
-    padding: 5px 10px;
-}
-
-.menu-button, .menu-button:hover {
-    text-decoration: none;
-    font-size: var(--nav-button-font-size);
-    color: var(--main-font-color);
     padding: 5px 10px;
 }
 

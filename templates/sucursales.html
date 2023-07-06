@@ -5,13 +5,6 @@
     <link href="{% static './assets/css/sucursales.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block active%}
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
-<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'sucursales' %}">Sucursales</a></li>
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'register' %}">Registrate</a></li>
-{% endblock %}
-
 {% block content %}
     <main> 
         <section class="sucursales">

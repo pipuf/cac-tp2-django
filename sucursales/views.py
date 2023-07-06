@@ -10,23 +10,23 @@ class CrearSucursal(CreateView):
     fields="__all__"
     success_url = ('/sucursales/listar_sucursales')
 
-class EliminarSucursal(DeleteView):
-    template_name="./sucursales/eliminar_sucursal.html"
+class BorrarSucursal(DeleteView):
+    template_name="./sucursales/borrar_sucursal.html"
     model= Sucursal
     fields="__all__"
-    success_url = ('/')
+    success_url = ('/sucursales/listar_sucursales')
 
 class ActualizarSucursal(UpdateView):
     template_name="./sucursales/actualizar_sucursal.html"
     model= Sucursal
     fields="__all__"
-    success_url = ('/')
+    success_url = ('/sucursales/listar_sucursales')
 
 class DetalleSucursal(DetailView):
     template_name="./sucursales/detalle_sucursal.html"
     model= Sucursal
     fields="__all__"
-    success_url = ('/')
+    success_url = ('/sucursales/listar_sucursales')
 
 class ListarSucursales(ListView):
     template_name="./sucursales/listar_sucursales.html"

@@ -8,13 +8,6 @@
     <link href="{% static './assets/css/formRegistro.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block active%}
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'index' %}">Inicio</a></li>
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'menu' %}">Menú</a></li>
-<li class="flex-menu-item"><a class="menu-button" href="{% url 'sucursales' %}">Sucursales</a></li>
-<li class="flex-menu-item"><a class="menu-button-first" href="{% url 'register' %}">Registrate</a></li>
-{% endblock %}
-
 {% block content %}
     <main> 
         <dialog id="user-alert">
