@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static './assets/css/listaSuc.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
     <main>
@@ -9,8 +14,8 @@
             <table>
                 {{ form.as_table }}
             </table>
-            <button type="cancel">Cancelar</button>
-            <button type="submit">Confirmar</button>
+            <a class="cta-button" href="{% url 'listar_sucursales' %}">Cancelar</a>
+            <button class="cta-button" type="submit">Confirmar</button>
         </form>
     {% endif %}
     </main>

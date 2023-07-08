@@ -8,7 +8,7 @@ main{
 }
 
 
-table{ 
+.lista{ 
      font-size: 12px;
      margin: 45px;
      width: 480px;
@@ -16,7 +16,7 @@ table{
      border-collapse: collapse;
 }
 
-th{
+.header-lista{
     font-size: 13px;
     font-weight: normal;
     padding: 8px;
@@ -27,7 +27,7 @@ th{
     text-align: center;
     }
 
-td{
+.celda-lista{
     padding: 8px;
     background: var(--gris-claro);
     border-bottom: 1px solid #fff;
@@ -35,7 +35,7 @@ td{
     border-top: 1px solid transparent;
 }
 
-tr:hover td{
+.header-lista:hover td{
     background: rgb(231, 164, 159);
     color: #339; 
 }
@@ -47,8 +47,9 @@ tr:hover td{
     max-width: fit-content; */
     text-decoration: none;
     font-size: var(--nav-button-font-size);
-    border: 2px solid var(--rojo);
+    border: 2px solid;
     border-radius: 5px;
+    border-color: var(--rojo);
     background-color: var(--rojo);
     color: var(--secondary-font-color);
     padding: 5px 10px;

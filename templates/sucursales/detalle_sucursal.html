@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static './assets/css/listaSuc.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
     <main>
-    {% if form %}
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-            </table>
-            <button type="button">Volver a la lista</button>
-        </form>
-    {% endif %}
+        <h1>{{ object.nombre }}</h1>
+        <p>{{ object.descripcion }}</p>
+        <a class="cta-button" href="{% url 'listar_sucursales' %}">Volver a la lista...</a>
     </main>
 {% endblock %}

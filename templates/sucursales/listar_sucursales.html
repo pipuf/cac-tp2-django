@@ -8,26 +8,25 @@
 {% block content %}
     <main>
         <div class="row">
-            <table>
+            <table class="lista">
                 <!-- <th style="display: none;">ID</th> -->
-                <th>Nombre</th>
-                <th>Domicilio</th>
-                <th>Telefono</th>
-                <th colspan="3">Acciones</th>
+                <th class="header-lista">Nombre</th>
+                <th class="header-lista">Domicilio</th>
+                <th class="header-lista">Telefono</th>
+                <th class="header-lista" colspan="3">Acciones</th>
                 {% for sucursal in object_list %}
                 <tr>
                     <!-- <td  style="display: none;">{{ sucursal.id }}</td> -->
-                    <td>{{ sucursal.nombre }}</td>                    
-                    <td>{{ sucursal.domicilio }}</td>
-                    <td>{{ sucursal.telefono }}</td>
-                    <td><a class="cta-button" href="{% url 'detalle_sucursal' sucursal.id %}">Ver</a></td>
-                    <td><a class="cta-button" href="{% url 'actualizar_sucursal' sucursal.id %}">Editar</a></td>
-                    <td><a class="cta-button" href="{% url 'borrar_sucursal' sucursal.id %}">Borrar</a></td>
+                    <td class="celda-lista">{{ sucursal.nombre }}</td>                    
+                    <td class="celda-lista">{{ sucursal.domicilio }}</td>
+                    <td class="celda-lista">{{ sucursal.telefono }}</td>
+                    <td class="celda-lista"><a class="cta-button" href="{% url 'detalle_sucursal' sucursal.id %}">Ver</a></td>
+                    <td class="celda-lista"><a class="cta-button" href="{% url 'actualizar_sucursal' sucursal.id %}">Editar</a></td>
+                    <td class="celda-lista"><a class="cta-button" href="{% url 'borrar_sucursal' sucursal.id %}">Borrar</a></td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
-
-        <a href="{% url 'agregar_sucursal' %}"><button>Agregar</button></a>
+        <a  class="cta-button" href="{% url 'agregar_sucursal' %}">Agregar</a>
     </main>
 {% endblock %}

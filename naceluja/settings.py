@@ -40,7 +40,7 @@ BASE_APPS = [
 ]
 THIRD_APPS = []
 
-MY_APPS = ['sucursales',]
+MY_APPS = ['sucursales', 'usuarios']
 
 INSTALLED_APPS = BASE_APPS + THIRD_APPS + MY_APPS
 

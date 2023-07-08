@@ -25,4 +25,5 @@ urlpatterns = [
     path('sucursales/', SucursalesView.as_view(), name='sucursales'),
     path('register/', RegisterView.as_view(), name='register'),
     path('sucursales/', include('sucursales.urls'),name='include_url_sucursales'),
+    path('usuarios/', include('usuarios.urls'),name='include_url_usuarios'),
 ]
