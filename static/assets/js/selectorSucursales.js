@@ -1,3 +1,5 @@
+const URL_API = "/v1/"
+
 function elegirSucursal (nombreBoton){
     // Cambia el contenido del iframe (google maps) y de la info de la sucursal segun la seleccion
     var sucursal = {

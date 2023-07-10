@@ -13,6 +13,7 @@
                 <th class="header-lista">Nombre</th>
                 <th class="header-lista">Domicilio</th>
                 <th class="header-lista">Telefono</th>
+                <th class="header-lista">Activa</th>
                 <th class="header-lista" colspan="3">Acciones</th>
                 {% for sucursal in object_list %}
                 <tr>
@@ -20,6 +21,7 @@
                     <td class="celda-lista">{{ sucursal.nombre }}</td>                    
                     <td class="celda-lista">{{ sucursal.domicilio }}</td>
                     <td class="celda-lista">{{ sucursal.telefono }}</td>
+                    <td class="celda-lista">{{ sucursal.isActive }}</td>
                     <td class="celda-lista"><a class="cta-button" href="{% url 'detalle_sucursal' sucursal.id %}">Ver</a></td>
                     <td class="celda-lista"><a class="cta-button" href="{% url 'actualizar_sucursal' sucursal.id %}">Editar</a></td>
                     <td class="celda-lista"><a class="cta-button" href="{% url 'borrar_sucursal' sucursal.id %}">Borrar</a></td>

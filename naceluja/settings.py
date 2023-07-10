@@ -37,10 +37,11 @@ BASE_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 THIRD_APPS = []
 
-MY_APPS = ['sucursales', 'usuarios']
+MY_APPS = ['sucursales', 'sucursalesAPI']
 
 INSTALLED_APPS = BASE_APPS + THIRD_APPS + MY_APPS
 
@@ -132,3 +133,12 @@ STATICFILES_DIRS =  [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

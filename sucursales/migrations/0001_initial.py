@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('domicilio', models.CharField(max_length=250)),
                 ('telefono', models.CharField(max_length=20)),
                 ('boton', models.CharField(max_length=20)),
-                ('iFrame', models.TextField()),
+                ('mapa', models.TextField()),
                 ('descripcion', models.TextField()),
             ],
         ),

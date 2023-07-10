@@ -116,6 +116,17 @@ h2{
    align-items: center;
 }
 
+.cta-button{
+   text-decoration: none;
+   font-size: var(--nav-button-font-size);
+   border: 2px solid;
+   border-radius: 5px;
+   border-color: var(--rojo);
+   background-color: var(--rojo);
+   color: var(--secondary-font-color);
+   padding: 5px 10px;
+}
+
  /* ------------- Animacion flip-over ---------------- */
 
 .animation-flip-content{    

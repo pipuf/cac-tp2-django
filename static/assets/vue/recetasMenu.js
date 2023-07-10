@@ -88,7 +88,7 @@
                     this.activeItem = index;
                 },                
             },
-            delimiters : ["--", "--"],
+            delimiters : ["||", "||"],
         };
 
         /*ASIGNACION DEL CORE A METODO DE VUE*/

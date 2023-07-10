@@ -24,6 +24,8 @@ urlpatterns = [
     path('menu/', MenuView.as_view(), name='menu'),
     path('sucursales/', SucursalesView.as_view(), name='sucursales'),
     path('register/', RegisterView.as_view(), name='register'),
+    path('api-auth/', include('rest_framework.urls')),
     path('sucursales/', include('sucursales.urls'),name='include_url_sucursales'),
-    path('usuarios/', include('usuarios.urls'),name='include_url_usuarios'),
+    # path('usuarios/', include('usuarios.urls'),name='include_url_usuarios'),
+    path('v1/', include('sucursalesAPI.urls'),name='include_url_sucursalesAPI'),
 ]

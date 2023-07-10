@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, DeleteView, UpdateView, DetailView, ListView 
+from django.views.generic import CreateView, DeleteView, UpdateView, DetailView, ListView  
 from sucursales.models import Sucursal
 
 # Create your views here.
