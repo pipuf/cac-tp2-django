@@ -140,7 +140,8 @@ if DEBUG:
     STATIC_URL = 'static/'
     STATICFILES_DIRS =  [BASE_DIR / 'static']
 else:
-    STATIC_ROOT = "/home/pipuf/cac-tp2-django/static"    
+    STATIC_ROOT = "/home/pipuf/cac-tp2-django/static"
+    STATIC_URL = 'static/'    
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
