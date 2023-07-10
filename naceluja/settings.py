@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hi^^-wsblmxd@+1mjcxhmea+imhhxbf0moyg6imdzf1k&0pm!e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pipuf.pythonanywhere.com']
 
 
 # Application definition
@@ -79,18 +79,27 @@ WSGI_APPLICATION = 'naceluja.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'naceluja',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql', 
+            'NAME': 'naceluja',
+            'USER': 'root',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+            'PORT': '3306',
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql', 
+            'NAME': 'pipuf$naceluja',
+            'USER': 'pipuf',
+            'PASSWORD': 'N@c3luja1!',
+            'HOST': 'pipuf.mysql.pythonanywhere-services.com', 
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
