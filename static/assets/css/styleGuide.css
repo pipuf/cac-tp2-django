@@ -129,6 +129,12 @@ h2{
    padding: 5px 10px;
 }
 
+.access-denied-img {
+   width: 100%;
+   height: 100%;
+   margin: auto;
+}
+
  /* ------------- Animacion flip-over ---------------- */
 
 .animation-flip-content{    

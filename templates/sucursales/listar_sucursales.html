@@ -7,6 +7,9 @@
 
 {% block content %}
     <main>
+        {% if request.user.groups.all %}
+        {% for group in request.user.groups.all %}
+         {% if group.name == 'Encargado' or group.name == 'SiteAdmin' %}
         <div class="grid">
             <table class="lista">
                 <!-- <th style="display: none;">ID</th> -->
@@ -30,5 +33,18 @@
             </table>
             <a  class="cta-button" id="cta-admin-sucursales" href="{% url 'agregar_sucursal' %}">Agregar</a>
         </div>
+        {% else %}
+         <div>
+            <h3>No tienes permisos para acceder a esta página</h3>
+            <!-- <img class="access-denied-img" src="{% static './assets/img/access-denied.jpg' %}" alt="access denied"> -->
+            </div>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <div>
+            <h3>No tienes permisos para acceder a esta página</h3>
+            <!-- <img class="access-denied-img" src="{% static './assets/img/access-denied.jpg' %}" alt="access denied"> -->
+          </div> 
+      {% endif %}          
     </main>
 {% endblock %}

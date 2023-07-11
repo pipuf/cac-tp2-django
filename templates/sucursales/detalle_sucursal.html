@@ -7,7 +7,12 @@
 {% endblock %}
 
 {% block content %}
-    <main>
+    <main>         
+       {% if request.user.groups.all %}
+        {% for group in request.user.groups.all %}
+         {% if group.name == 'Encargado' or group.name == 'SiteAdmin' %}
+           
+
         <section class="sucursales">
             <div class="grid">
                 <div class="texto-sucursales">
@@ -26,6 +31,19 @@
             <div class="cta-section">        
                 <a class="cta-button" href="{% url 'listar_sucursales' %}">Volver a la lista...</a>
             </div>     
-            </section>              
+        </section> 
+        {% else %}
+         <div>
+            <h3>No tienes permisos para acceder a esta página</h3>
+            <!-- <img class="access-denied-img" src="{% static './assets/img/access-denied.jpg' %}" alt="access denied"> -->
+             </div>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <div>
+            <h3>No tienes permisos para acceder a esta página</h3>
+            <!-- <img class="access-denied-img" src="{% static './assets/img/access-denied.jpg' %}" alt="access denied"> -->
+           </div> 
+      {% endif %}  
     </main>
 {% endblock %}
