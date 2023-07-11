@@ -2,29 +2,33 @@ main{
     min-height: 70vh;
 }
 
+.grid{
+    height: auto;
+}
+
 .lista{ 
     grid-column: 2/12;
     grid-row: 2;
-    font-size: var(--tiny-font-size);
     text-align: left;
     border-collapse: collapse;
 }
 
 .header-lista{
-    font-size: 13px;
-    font-weight: normal;
+    font-size: var(--tabla-header-font-size);
+    font-weight:bold;
     padding: 8px;
     background: var(--rojo);
     border-top: 4px solid var(--rojo);    
-    border-bottom: 1px solid #fff; 
+    border-bottom: 1px solid white; 
     color: var(--gris-claro); 
     text-align: center;
     }
 
 .celda-lista{
     padding: 8px;
+    font-size: var(--tabla-datos-font-size);
     background: var(--gris-claro);
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     color: var(--gris-oscuro);
     border-top: 1px solid transparent;
     padding: 1rem;
@@ -36,20 +40,27 @@ main{
 .input-sucursales{
     display: block;
     width: 100%;
-    font-size: var(--h4-font-size);;
+    font-size: var(--h5-font-size);;
     margin: 0.5rem;
     padding: 0.5rem;
-    border: 1px solid var(--rojo);
+    border: 1px solid var(--gris-oscuro);
     border-radius: 5px;
 }
 
-.text-big{
-    height: 5rem
+.input-content > div{
+    border: none;
+} 
+
+.input-prompt{
+    font-size: var(--h4-font-size);
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
 .cta-section{
     grid-column: 2/12;
     margin: 0 auto;
+    padding:1em
 }
 
 #cta-admin-sucursales{

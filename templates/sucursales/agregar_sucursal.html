@@ -15,9 +15,11 @@
                     <input type="text" class="input-sucursales" autocomplete="false" placeholder="Nombre*" required name="nombre">
                     <input type="text" class="input-sucursales" autocomplete="false" placeholder="Domicilio*" required name="domicilio">
                     <input type="text" class="input-sucursales" autocomplete="false" placeholder="Teléfono*" required name="telefono">
-                    <input type="text" class="input-sucursales text-big" autocomplete="false" placeholder="Mapa*" required name="mapa">
-                    <input type="text" class="input-sucursales text-big" autocomplete="false" placeholder="Descripción" required name="descripcion">   
-                    <input type="checkbox" class="input-sucursales" id="checkIsActive" name="isActive" autocomplete="false" placeholder="isActive" checked="true" style="display: none">
+                    <textarea class="input-sucursales" autocomplete="false" placeholder="Mapa*" required name="mapa" wrap="soft" rows=5>{{ mapa }}</textarea>
+                    <div class="cta-section">
+                        <textarea class="input-sucursales" autocomplete="false" placeholder="Descripción" required name="descripcion" wrap="soft" rows=5>{{ descripcion }}</textarea>      
+                        <input type="checkbox" class="input-sucursales" id="checkIsActive" name="isActive" autocomplete="false" placeholder="isActive" checked="true" style="display: none">
+                    </div>    
                 </div>
                 <div class="cta-section">
                     <a class="cta-button" id="cta-cancelar" href="{% url 'listar_sucursales' %}">Cancelar</a>

@@ -8,16 +8,16 @@
 {% block content %}
     <main>
     {% if form %}
-    <div class="grid">
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <p>Seguro querés borrar la sucursal "{{ object }}" ?</p>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="grid">
+            <p class="input-content input-prompt">Seguro querés borrar la sucursal "{{ object }}" ?</p>
             <div class="cta-section">
-            <a class="cta-button" href="{% url 'listar_sucursales' %}">Cancelar</a>
-            <button class="cta-button" type="submit">Confirmar</button>
+                <a class="cta-button" href="{% url 'listar_sucursales' %}">Cancelar</a>
+                <button class="cta-button" type="submit">Confirmar</button>
             </div>  
-        </form>
-    </div>    
+        </div>
+    </form>    
     {% endif %}
     </main>
 {% endblock %}

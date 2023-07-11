@@ -2,13 +2,30 @@
 {% load static %}
 
 {% block style %}
+    <link href="{% static './assets/css/sucursales.css' %}" rel="stylesheet">
     <link href="{% static './assets/css/listaSuc.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
     <main>
-        <h1>{{ object.nombre }}</h1>
-        <p>{{ object.descripcion }}</p>
-        <a class="cta-button" href="{% url 'listar_sucursales' %}">Volver a la lista...</a>
+        <section class="sucursales">
+            <div class="grid">
+                <div class="texto-sucursales">
+                        <p id="descripcion-sucursal">
+                            {{ object.descripcion }}
+                        </p>
+                </div>
+                <div class="mapa-sucursal">
+                    <iframe class="frame-mapa" id="mapa-sucursal" src="{{ object.mapa }}"></iframe>
+                </div>             
+                <div class="datos-sucursal">
+                    <hr id="separador"></hr>
+                    <h3 id="nombre-sucursal">{{ object.nombre }}</h3>
+                    <p id="info-sucursal">{{ object.domicilio }}<br>{{ object.telefono }}</p>
+            </div>   
+            <div class="cta-section">        
+                <a class="cta-button" href="{% url 'listar_sucursales' %}">Volver a la lista...</a>
+            </div>     
+            </section>              
     </main>
 {% endblock %}
