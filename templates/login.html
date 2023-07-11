@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link href="{% static './assets/css/main.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <main> 
+        <section class="form-registro">
+            <div class="grid">
+                <div class="formulario">
+                    <!-- el metodo novalidate desactiva la validacion automatica del form
+                    usando la API de validacion de restricciones  -->
+                    {% if form %}
+                    <form id="form-registro" method="POST" action="novalidate"> 
+                        {% csrf_token %}
+                        <table>
+                            {{ form.as_table }}
+                        </table>
+                        <a class="cta-button" href="{% url 'listar_sucursales' %}">Cancelar</a>
+                        <button class="cta-button" type="submit">Submit</button>                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+<!-- 
+{% block script %}
+    <script type="module" src="{% static './assets/js/formValidator.js' %}"></script>
+{% endblock %} -->
+

@@ -7,7 +7,7 @@
 
 {% block content %}
     <main>
-        <div class="row">
+        <div class="grid">
             <table class="lista">
                 <!-- <th style="display: none;">ID</th> -->
                 <th class="header-lista">Nombre</th>
@@ -28,7 +28,7 @@
                 </tr>
                 {% endfor %}
             </table>
+            <a  class="cta-button" id="cta-admin-sucursales" href="{% url 'agregar_sucursal' %}">Agregar</a>
         </div>
-        <a  class="cta-button" href="{% url 'agregar_sucursal' %}">Agregar</a>
     </main>
 {% endblock %}

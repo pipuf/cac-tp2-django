@@ -14,7 +14,7 @@
                         ||detalleSucursal.descripcion||
                     </p>
             </div>
-            <select name="selector-sucursales" id="selector-sucursales"  @change="getDetalleSucursal($event.target.value)"> 
+            <select class="selector-sucursales" name="selector-sucursales" id="selector-sucursales"  @change="getDetalleSucursal($event.target.value)"> 
                 <option  
                     v-for="sucursal in listaSucursales" 
                     v-show="sucursal.isActive"
@@ -27,10 +27,16 @@
                 <hr id="separador"></hr>
                 <h3 id="nombre-sucursal">||detalleSucursal.nombre||</h3>
                 <p id="info-sucursal">||detalleSucursal.domicilio||<br>||detalleSucursal.telefono||</p>
-                </div>
-        </div>
-        </section> 
-        <a  class="cta-button" href="{% url 'listar_sucursales' %}">CRUD sucursales</a>        
+            </div>
+            {% if request.user.groups.all %}
+            {% for group in request.user.groups.all %}
+              {% if group.name == 'Encargado' or group.name == 'SiteAdmin' %}
+                 <a  class="cta-button" href="{% url 'listar_sucursales' %}">Administrar sucursales</a> 
+              {% endif %}
+            {% endfor %}
+          {% endif %}  
+        </div>       
+        </section>             
     </main>
 {% endblock %}
 

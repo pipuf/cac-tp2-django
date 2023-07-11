@@ -10,7 +10,7 @@
 
 {% block content %}
     <main> 
-        <dialog id="user-alert">
+        <!-- <dialog id="user-alert">
             <section class="texto-alert">
                 <h4 id="titulo-alert"></h4>
                 <p id="info-alert"></p>
@@ -20,17 +20,19 @@
             <div id="boton-container-alert">
                 <button type="cancel" id="boton-alert">OK</button> 
             </div>
-        </dialog>
+        </dialog> -->
         <section class="form-registro">
             <div class="grid">
                 <div class="texto-registro">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam incidunt magnam porro veniam provident illo eaque nemo dolores aspernatur natus, illum consequatur modi esse labore nam similique aperiam veritatis. Voluptatibus aspernatur quibusdam optio fuga a, soluta, veritatis, nam labore ducimus quo iusto. Hic, blanditiis tenetur? Quod commodi delectus aliquam ut!</p>
                 </div>
                 <div class="formulario">
+                    antes del from
                     <!-- el metodo novalidate desactiva la validacion automatica del form
                     usando la API de validacion de restricciones  -->
                     {% if form %}
-                    <form id="form-registro" method="POST" action="" novalidate> 
+                    <div id="form-registro" action="novalidate"> 
+                        despues del from 
                         {% csrf_token %}
                         <div class="form-row grid-form">
                             <div class="form-group  form-columna1">
@@ -96,14 +98,14 @@
                             <button id="botonSubmit" type="submit" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Registrate</button>
                             <!-- <button id="botonReset" type="reset" class="btn btn-danger btn-lg pl-4 pr-4 boton-registro">Borrar</button> -->
                         </div>
-                    </form>
+                    </div>
                     {% endif %}
                 </div>
             </div>
         </section>
     </main>
 {% endblock %}
-
+<!-- 
 {% block script %}
     <script type="module" src="{% static './assets/js/formValidator.js' %}"></script>
-{% endblock %}
+{% endblock %} -->

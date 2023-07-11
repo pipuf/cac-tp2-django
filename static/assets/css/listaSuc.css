@@ -2,18 +2,12 @@ main{
     min-height: 70vh;
 }
 
-.row{
-    grid-column: 3/6;
-    grid-row: 2;
-}
-
-
 .lista{ 
-     font-size: 12px;
-     margin: 45px;
-     width: 480px;
-     text-align: left;
-     border-collapse: collapse;
+    grid-column: 2/12;
+    grid-row: 2;
+    font-size: var(--tiny-font-size);
+    text-align: left;
+    border-collapse: collapse;
 }
 
 .header-lista{
@@ -30,23 +24,36 @@ main{
 .celda-lista{
     padding: 8px;
     background: var(--gris-claro);
-    border-bottom: 1px solid #fff;
-    color: #669;
+    border-bottom: 1px solid white;
+    color: var(--gris-oscuro);
     border-top: 1px solid transparent;
+    padding: 1rem;
+}
+.input-content{
+    grid-column: 2/12;
 }
 
-.header-lista:hover td{
-    background: rgb(231, 164, 159);
-    color: #339; 
-}
-
-/* .cta-button{
-    text-decoration: none;
-    font-size: var(--nav-button-font-size);
-    border: 2px solid;
+.input-sucursales{
+    display: block;
+    width: 100%;
+    font-size: var(--h4-font-size);;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--rojo);
     border-radius: 5px;
-    border-color: var(--rojo);
-    background-color: var(--rojo);
-    color: var(--secondary-font-color);
-    padding: 5px 10px;
-} */
+}
+
+.text-big{
+    height: 5rem
+}
+
+.cta-section{
+    grid-column: 2/12;
+    margin: 0 auto;
+}
+
+#cta-admin-sucursales{
+    grid-column: 2/12;
+    margin: 1rem 0 1rem auto;
+}
+

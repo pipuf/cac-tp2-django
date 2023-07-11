@@ -186,6 +186,7 @@ function mostrarPopup (titulo,info,datos)  {
     }
 }
 
-miForm.addEventListener('submit', (e) => validarForm(e,miForm));
+// document.getElementById("form-registro").addEventListener('submit', (e) => validarForm(e,miForm));
+console.log(document)
 
-botonPopup.addEventListener('click', (e) => {e.preventDefault;popup.close()});
+// botonPopup.addEventListener('click', (e) => {e.preventDefault;popup.close()});

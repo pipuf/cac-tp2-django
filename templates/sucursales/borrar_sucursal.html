@@ -8,15 +8,16 @@
 {% block content %}
     <main>
     {% if form %}
+    <div class="grid">
         <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p>Seguro querés borrar la sucursal "{{ object }}" ?</p>
-            <table>
-                {{ form.as_table }}
-            </table>
+            <div class="cta-section">
             <a class="cta-button" href="{% url 'listar_sucursales' %}">Cancelar</a>
             <button class="cta-button" type="submit">Confirmar</button>
+            </div>  
         </form>
+    </div>    
     {% endif %}
     </main>
 {% endblock %}
