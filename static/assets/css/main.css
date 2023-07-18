@@ -67,7 +67,8 @@ main{
 }
 
 .texto-nosotros .parrafo{
-    margin: 10px 10px;
+    margin: 10px 30px;
+    line-height: 1.5;
 }
 
 .opciones{

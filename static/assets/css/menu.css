@@ -10,6 +10,7 @@ main{
 .texto-menu p{
     margin: 10px 0; 
     padding: 20px;
+    line-height: 1.5;
 }
 
 .grid-menu {
